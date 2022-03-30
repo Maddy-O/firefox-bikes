@@ -69,7 +69,7 @@ app.get( '/auth/google/callback',
 /**
  * ---------------------------SERVER---------------------------
  * 
- * ⚠ Please Dont Change Port Number let it be 4500 Only Strick Warning
+ * ⚠ Please Dont Change the Port Number, let it be 4500 Only Strict Warning
 */
 
 const port = 4500;
@@ -82,4 +82,3 @@ app.listen(port, async function(){
         console.log(e)
     }
 })
-

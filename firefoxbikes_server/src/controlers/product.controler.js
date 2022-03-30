@@ -8,21 +8,14 @@ const Product = require("../models/product.model");
 
 router.get("", async (req, res) => {
   try {
-    let item = await Product.find().lean().exec();
-    return res.send(item);
+    console.log("Itemms")
+    let items = await Product.find().lean().exec();
+    return res.send(items);
   } catch (e) {
     return res.status(500).send(e.message);
   }
 });
 
-router.get("/:limit", async (req, res) => {
-  try {
-    let item = await Product.find().limit(req.params.limit).lean().exec();
-    return res.send(item);
-  } catch (e) {
-    return res.status(500).send(e.message);
-  }
-});
 router.get("/:id", async (req, res) => {
   try {
     let item = await Product.findById(req.params.id).lean().exec();
@@ -31,6 +24,7 @@ router.get("/:id", async (req, res) => {
     return res.status(500).send(e.message);
   }
 });
+
 
 router.post("", async (req, res) => {
   try {
@@ -64,5 +58,6 @@ router.delete("/:id", async (req, res) => {
     return res.status(500).send(e.message);
   }
 });
+
 
 module.exports = router;
