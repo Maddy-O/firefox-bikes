@@ -47,5 +47,21 @@
       "invoiceNo": 123456,
       "id": 4
     }
+  ],
+  "homeservice": [
+    {
+      "customerName": "Madan Mohan",
+      "customerEmail": "madan_fw14_260@masai.school",
+      "customMobileNo": "9971501423",
+      "customerAddress": "hahahhhadjblhflfvhdkfjnvlidfhalnfgalkgrihgnrgfljkadrhbnv",
+      "zipCode": "110001",
+      "StaticRangeState": "Maharashtra",
+      "StaticRangecity": "Kolkata",
+      "bikeName": "ALFA 20",
+      "dateOfService": "3212-02-12",
+      "timeSlot": "12.30PM-2.30PM",
+      "selectPackage": "standardGearless",
+      "id": 1
+    }
   ]
 }

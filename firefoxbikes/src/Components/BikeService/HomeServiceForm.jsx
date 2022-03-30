@@ -2,19 +2,19 @@ import { useState } from "react";
 import Axios from "axios";
 
 export const HomeServiceForm = () => {
-  const url = "http://localhost:8080/ServiceBooking";
+  const url = "http://localhost:8080/homeservice ";
   const [data, setData] = useState({
     customerName: "",
     customerEmail: "",
     customMobileNo: "",
+    customerAddress: "",
+    zipCode: "",
     StaticRangeState: "",
     StaticRangecity: "",
-    zipCode: "",
     bikeName: "",
-    purchasedForm: "",
-    storeForService: "",
-    invoiceNo: "",
-    tnc: "",
+    dateOfService: "",
+    timeSlot: "",
+    selectPackage: "",
   });
 
   const handleInduptChange = (e) => {
@@ -30,23 +30,62 @@ export const HomeServiceForm = () => {
       customerName: data.customerName,
       customerEmail: data.customerEmail,
       customMobileNo: data.customMobileNo,
+      customerAddress: data.customerAddress,
+      zipCode: data.zipCode,
       StaticRangeState: data.StaticRangeState,
       StaticRangecity: data.StaticRangecity,
-      zipCode: data.zipCode,
       bikeName: data.bikeName,
-      purchasedForm: data.purchasedForm,
-      storeForService: data.storeForService,
-      invoiceNo: parseInt(data.invoiceNo),
-      tnc: data.tnc,
+      dateOfService: data.dateOfService,
+      timeSlot: data.timeSlot,
+      selectPackage: data.selectPackage,
     }).then((res) => {
       console.log(res.data);
     });
   };
 
   return (
-    <>
+    <div style={{ border: "1px red solid", width: "75%", margin: "auto" }}>
       <h1>Home Service</h1>
-      <form onSubmit={(e) => submit(e)}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "50px",
+          padding: "5px",
+        }}
+      >
+        <h4 style={{ color: "#ff5000" }}>BOOK A SERVICE</h4>
+        <a
+          style={{
+            textDecoration: "none",
+            marginLeft: "50%",
+          }}
+          href="#packages"
+        >
+          <p
+            style={{
+              border: "1px solid #ff5000",
+              color: "white",
+              padding: "5px",
+              backgroundColor: "#ff5000",
+            }}
+          >
+            View Packages
+          </p>
+        </a>
+      </div>
+      <form
+        onSubmit={(e) => submit(e)}
+        style={{
+          width: "80%",
+          margin: "auto",
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          gap: "1rem",
+          color: "red",
+        }}
+      >
         <input
           onChange={(e) => handleInduptChange(e)}
           id="customerName"
@@ -54,7 +93,7 @@ export const HomeServiceForm = () => {
           placeholder="CUSTOMER NAME*"
           type="text"
         ></input>
-        <br />
+        {/* <br /> */}
         <input
           onChange={(e) => handleInduptChange(e)}
           id="customerEmail"
@@ -62,7 +101,7 @@ export const HomeServiceForm = () => {
           placeholder="CUSTOMER EMAIL*"
           type="text"
         ></input>
-        <br />
+        {/* <br /> */}
         <input
           onChange={(e) => handleInduptChange(e)}
           id="customMobileNo"
@@ -70,7 +109,28 @@ export const HomeServiceForm = () => {
           placeholder="CUSTOMER MOBILE NO*"
           type="number"
         ></input>
-        <br />
+        {/* <br /> */}
+        <textarea
+          onChange={(e) => handleInduptChange(e)}
+          id="customerAddress"
+          value={data.customerAddress}
+          placeholder="ENTER YOUR ADDRESS*"
+        ></textarea>
+        {/* <br /> */}
+        <select onChange={(e) => handleInduptChange(e)} id="zipCode">
+          <option>SELECT ZIPCODE</option>
+          <option value="110001">110001</option>
+          <option value="110002">110002</option>
+          <option value="110003">110003</option>
+          <option value="110004">110004</option>
+          <option value="110005">110005</option>
+          <option value="110006">110006</option>
+          <option value="110007">110007</option>
+          <option value="110008">110008</option>
+          <option value="110009">110009</option>
+          <option value="110010">110010</option>
+        </select>
+        {/* <br /> */}
         <select onChange={(e) => handleInduptChange(e)} id="StaticRangeState">
           <option>SELECT STATE</option>
           <option value="Delhi">Delhi</option>
@@ -84,7 +144,7 @@ export const HomeServiceForm = () => {
           <option value="Andhra Pradesh">Andhra Pradesh</option>
           <option value="Uttar Pradesh">Uttar Pradesh</option>
         </select>
-        <br />
+        {/* <br /> */}
         <select onChange={(e) => handleInduptChange(e)} id="StaticRangecity">
           <option>SELECT CITY</option>
           <option value="Delhi(NCR)">Delhi(NCR)</option>
@@ -98,15 +158,7 @@ export const HomeServiceForm = () => {
           <option value="Visakhapatnam">Visakhapatnam</option>
           <option value="Kanpur">Kanpur</option>
         </select>
-        <br />
-        <input
-          onChange={(e) => handleInduptChange(e)}
-          id="zipCode"
-          value={data.zipCode}
-          placeholder="ZIP CODE"
-          type="number"
-        ></input>
-        <br />
+        {/* <br /> */}
         <select onChange={(e) => handleInduptChange(e)} id="bikeName">
           <option>BIKE NAME*</option>
           <option value="AXXIS 27.5 D">AXXIS 27.5 D</option>
@@ -122,54 +174,38 @@ export const HomeServiceForm = () => {
           <option value="BLACK WIDOW 20">BLACK WIDOW 20</option>
           <option value="BREEZE 24">BREEZE 24</option>
         </select>
-        <br />
-        <select onChange={(e) => handleInduptChange(e)} id="purchasedForm">
-          <option>PURCHASED FROM*</option>
-          <option value="ONLINE">ONLINE</option>
-          <option value="OFFLINE">OFFLINE</option>
-        </select>
-        <br />
-        <select onChange={(e) => handleInduptChange(e)} id="storeForService">
-          <option>SELECT STORE FOR SERVICE</option>
-          <option value="CYCLE WORLD - MHOW, 353441">
-            CYCLE WORLD - MHOW, 353441
-          </option>
-          <option value="(ONLY TREK BIKES)-AUROVILLE, 605101">
-            (ONLY TREK BIKES)-AUROVILLE, 605101
-          </option>
-          <option value="3 ACES ENTERPRISES - NEW DELHI, 110024">
-            3 ACES ENTERPRISES - NEW DELHI, 110024
-          </option>
-          <option value="3DIAMOND SUPERMARKET - CHENNAI, 600052">
-            3DIAMOND SUPERMARKET - CHENNAI, 600052
-          </option>
-          <option value="A B ENTERPRISES - KOLKATA, 700091">
-            A B ENTERPRISES - KOLKATA, 700091
-          </option>
-          <option value="A&A HEALTH STUDIO - BIKANER, 334401">
-            A&A HEALTH STUDIO - BIKANER, 334401
-          </option>
-          <option value="A1 CYCLE STORES - BEED, 431122">
-            A1 CYCLE STORES - BEED, 431122
-          </option>
-          <option value="ACE ENGINEERS - JAMMU, 180007">
-            ACE ENGINEERS - JAMMU, 180007
-          </option>
-          <option value="ACE KUDALE CAR PVT LTD - PUNE, 412307">
-            ACE KUDALE CAR PVT LTD - PUNE, 412307
-          </option>
-          <option value="AP CYCLES - UNA, 174303">
-            AP CYCLES - UNA, 174303
-          </option>
-        </select>
-        <br />
+        {/* <p>Only applicable on Firefox Bikes</p> */}
+        {/* <br /> */}
         <input
           onChange={(e) => handleInduptChange(e)}
-          id="invoiceNo"
-          value={data.invoiceNo}
-          placeholder="INVOICE NUMBER"
-          type="number"
+          type="date"
+          id="dateOfService"
+          value={data.dateOfService}
+          placeholder="DATE OF SERVICE*"
         ></input>
+        {/* <br /> */}
+        <select onChange={(e) => handleInduptChange(e)} id="timeSlot">
+          <option>SELECT TIME SLOT*</option>
+          <option value="9.30AM-11.30AM">9.30AM-11.30AM</option>
+          <option value="12.30PM-2.30PM">12.30PM-2.30PM</option>
+          <option value="3.30PM-5.30PM">3.30PM-5.30PM</option>
+        </select>
+        {/* <br /> */}
+        <select onChange={(e) => handleInduptChange(e)} id="selectPackage">
+          <option>SELECT PACKAGE</option>
+          <option value="standardGearless">
+            STANDARD SERVICE FOR GEARLESS BIKES (INR 1099)
+          </option>
+          <option value="premiumGearless">
+            PREMIUM SERVICE FOR GEARLESS BIKES (INR 1299)
+          </option>
+          <option value="standardGeared">
+            STANDARD SERVICE FOR GEARED BIKES (INR 1299)
+          </option>
+          <option value="premiumGeared">
+            PREMIUM SERVICE FOR GEARED BIKES (INR 1499)
+          </option>
+        </select>
         <br />
         <br />
         <input
@@ -182,6 +218,121 @@ export const HomeServiceForm = () => {
         <br />
         <button type="submit">Book Service</button>
       </form>
-    </>
+      <div id="packages">
+        <h1>Service Packages</h1>
+        <div>
+          <div>
+            <h1>STANDARD SERVICE</h1>
+            <p>Gearless Bikes</p>
+          </div>
+          <div>
+            <h3>Standard Service For Gearless Bikes ₹1099/-</h3>
+            <ul>
+              <li>Hubs Checkup</li>
+              <li>Alignment of Headset</li>
+              <li>Bottom Bracket Checkup</li>
+              <li>Check and adjust brakes</li>
+              <li>Check and Lube Chain</li>
+              <li>Hubs Checkup</li>
+              <li>Check and Lube Cables</li>
+              <li>Lubrication of Drivetrain</li>
+              <li>Wipe clean the bicycle</li>
+              <li>Check tire's & inflate to correct pressure</li>
+              <li>Checking and Tightening all screws and bolts</li>
+              <li>Test Ride by Service Engineer</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h1>PREMIUM SERVICE</h1>
+            <p>Gearless Bikes</p>
+          </div>
+          <div>
+            <h3>Premium Service For Gearless Bikes ₹1299/-</h3>
+            <ul>
+              <li>Hubs Checkup</li>
+              <li>Alignment of Headset</li>
+              <li>Bottom Bracket Checkup</li>
+              <li>Check and adjust brakes</li>
+              <li>Check and Lube Chain</li>
+              <li>Hubs Checkup</li>
+              <li>Check and Lube Cables</li>
+              <li>Fixing Puncture</li>
+              <li>Lubrication of Drivetrain</li>
+              <li>Wipe clean the bicycle</li>
+              <li>Wheel Truing ( Not wheel bend )</li>
+              <li>Check tire's & inflate to correct pressure</li>
+              <li>Dismantle of Hubs, Center Bracket and Headset</li>
+              <li>Test Ride by Service Engineer</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h1>STANDARD SERVICE</h1>
+            <p>Geared Bikes.</p>
+          </div>
+          <div>
+            <h3>Standard Service For Geared Bikes ₹1299/-</h3>
+            <ul>
+              <li>Hubs Checkup</li>
+              <li>Alignment of Headset</li>
+              <li>Bottom Bracket Checkup</li>
+              <li>Check and adjust brakes</li>
+              <li>Check and Lube Chain</li>
+              <li>Hubs Checkup</li>
+              <li>Check and Lube Cables</li>
+              <li>Fixing Puncture</li>
+              <li>Lubrication of Drivetrain</li>
+              <li>Wipe clean the bicycle</li>
+              <li>Wheel Truing ( Not wheel bend )</li>
+              <li>Check tire's & inflate to correct pressure</li>
+              <li>Checking and Tightening all screws and bolts</li>
+              <li>Test Ride by Service Engineer</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h1>PREMIUM SERVICE</h1>
+            <p>Geared Bikes.</p>
+          </div>
+          <div>
+            <h3>Premium Service For Geared Bikes ₹1499/-</h3>
+            <ul>
+              <li>Gear Tune up</li>
+              <li>Hubs Checkup</li>
+              <li>Alignment of Headset</li>
+              <li>Bottom Bracket Checkup</li>
+              <li>Check and adjust brakes</li>
+              <li>Check and Lube Chain</li>
+              <li>Hubs Checkup</li>
+              <li>Check and Lube Cables</li>
+              <li>Fixing Puncture</li>
+              <li>Lubrication of Drivetrain</li>
+              <li>Wipe clean the bicycle</li>
+              <li>Wheel Truing ( Not wheel bend )</li>
+              <li>Check tire's & inflate to correct pressure</li>
+              <li>Dismantle of Hubs, Center Bracket and Headset</li>
+              <li>Checking and Tightening all screws and bolts</li>
+              <li>Test Ride by Service Engineer</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h1>ADDITIONAL</h1>
+          </div>
+          <div>
+            <ul>
+              <li>Puncture: ₹49/-</li>
+              <li>Wheel truing: ₹149/-</li>
+              <li>Suspension: ₹199/-</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };

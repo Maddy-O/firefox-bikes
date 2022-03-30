@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Axios from "axios";
+import styled from "styled-components";
 
 export const ServiceStationForm = () => {
   const url = "http://localhost:8080/ServiceBooking";
@@ -43,10 +44,51 @@ export const ServiceStationForm = () => {
     });
   };
 
+  const Input = styled.button`
+    height: 50px;
+  `;
   return (
-    <>
-      <h1>Service Station</h1>
-      <form onSubmit={(e) => submit(e)}>
+    <div style={{ border: "1px red solid", width: "75%", margin: "auto" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "50px",
+          padding: "5px",
+        }}
+      >
+        <h4 style={{ color: "#ff5000" }}>BOOK A SERVICE</h4>
+        <a
+          style={{
+            textDecoration: "none",
+            marginLeft: "50%",
+          }}
+          href="#packages"
+        >
+          <p
+            style={{
+              border: "1px solid #ff5000",
+              color: "white",
+              padding: "5px",
+              backgroundColor: "#ff5000",
+            }}
+          >
+            View Packages
+          </p>
+        </a>
+      </div>
+      <form
+        onSubmit={(e) => submit(e)}
+        style={{
+          width: "80%",
+          margin: "auto",
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          gap: "1rem",
+          color: "red",
+        }}
+      >
         <input
           onChange={(e) => handleInduptChange(e)}
           id="customerName"
@@ -182,6 +224,121 @@ export const ServiceStationForm = () => {
         <br />
         <button type="submit">Book Service</button>
       </form>
-    </>
+      <div id="packages">
+        <h1>Service Packages</h1>
+        <div>
+          <div>
+            <h1>STANDARD SERVICE</h1>
+            <p>Gearless Bikes</p>
+          </div>
+          <div>
+            <h3>Standard Service For Gearless Bikes ₹1099/-</h3>
+            <ul>
+              <li>Hubs Checkup</li>
+              <li>Alignment of Headset</li>
+              <li>Bottom Bracket Checkup</li>
+              <li>Check and adjust brakes</li>
+              <li>Check and Lube Chain</li>
+              <li>Hubs Checkup</li>
+              <li>Check and Lube Cables</li>
+              <li>Lubrication of Drivetrain</li>
+              <li>Wipe clean the bicycle</li>
+              <li>Check tire's & inflate to correct pressure</li>
+              <li>Checking and Tightening all screws and bolts</li>
+              <li>Test Ride by Service Engineer</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h1>PREMIUM SERVICE</h1>
+            <p>Gearless Bikes</p>
+          </div>
+          <div>
+            <h3>Premium Service For Gearless Bikes ₹1299/-</h3>
+            <ul>
+              <li>Hubs Checkup</li>
+              <li>Alignment of Headset</li>
+              <li>Bottom Bracket Checkup</li>
+              <li>Check and adjust brakes</li>
+              <li>Check and Lube Chain</li>
+              <li>Hubs Checkup</li>
+              <li>Check and Lube Cables</li>
+              <li>Fixing Puncture</li>
+              <li>Lubrication of Drivetrain</li>
+              <li>Wipe clean the bicycle</li>
+              <li>Wheel Truing ( Not wheel bend )</li>
+              <li>Check tire's & inflate to correct pressure</li>
+              <li>Dismantle of Hubs, Center Bracket and Headset</li>
+              <li>Test Ride by Service Engineer</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h1>STANDARD SERVICE</h1>
+            <p>Geared Bikes.</p>
+          </div>
+          <div>
+            <h3>Standard Service For Geared Bikes ₹1299/-</h3>
+            <ul>
+              <li>Hubs Checkup</li>
+              <li>Alignment of Headset</li>
+              <li>Bottom Bracket Checkup</li>
+              <li>Check and adjust brakes</li>
+              <li>Check and Lube Chain</li>
+              <li>Hubs Checkup</li>
+              <li>Check and Lube Cables</li>
+              <li>Fixing Puncture</li>
+              <li>Lubrication of Drivetrain</li>
+              <li>Wipe clean the bicycle</li>
+              <li>Wheel Truing ( Not wheel bend )</li>
+              <li>Check tire's & inflate to correct pressure</li>
+              <li>Checking and Tightening all screws and bolts</li>
+              <li>Test Ride by Service Engineer</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h1>PREMIUM SERVICE</h1>
+            <p>Geared Bikes.</p>
+          </div>
+          <div>
+            <h3>Premium Service For Geared Bikes ₹1499/-</h3>
+            <ul>
+              <li>Gear Tune up</li>
+              <li>Hubs Checkup</li>
+              <li>Alignment of Headset</li>
+              <li>Bottom Bracket Checkup</li>
+              <li>Check and adjust brakes</li>
+              <li>Check and Lube Chain</li>
+              <li>Hubs Checkup</li>
+              <li>Check and Lube Cables</li>
+              <li>Fixing Puncture</li>
+              <li>Lubrication of Drivetrain</li>
+              <li>Wipe clean the bicycle</li>
+              <li>Wheel Truing ( Not wheel bend )</li>
+              <li>Check tire's & inflate to correct pressure</li>
+              <li>Dismantle of Hubs, Center Bracket and Headset</li>
+              <li>Checking and Tightening all screws and bolts</li>
+              <li>Test Ride by Service Engineer</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h1>ADDITIONAL</h1>
+          </div>
+          <div>
+            <ul>
+              <li>Puncture: ₹49/-</li>
+              <li>Wheel truing: ₹149/-</li>
+              <li>Suspension: ₹199/-</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };

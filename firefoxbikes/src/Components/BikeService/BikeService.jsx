@@ -6,10 +6,19 @@ import ServicePackages from "./ServicePackages";
 export const BikeService = () => {
   const [isToggled, setIsToggled] = useState(true);
   return (
-    <>
+    <div style={{ marginTop: "25px" }}>
       <button
         onClick={() => {
           setIsToggled(!isToggled);
+        }}
+        style={{
+          backgroundColor: "black",
+          color: "white",
+          height: "50px",
+          width: "200px",
+          border: "0px",
+          margin: "15px",
+          fontWeight: "bolder",
         }}
       >
         SERVICE STATION
@@ -18,14 +27,21 @@ export const BikeService = () => {
         onClick={() => {
           setIsToggled(!isToggled);
         }}
+        style={{
+          backgroundColor: "#ff5000",
+          color: "white",
+          height: "50px",
+          width: "200px",
+          border: "0px",
+          margin: "15px",
+          fontWeight: "bolder",
+        }}
       >
         HOME SERVICE
       </button>
-      <h1>BOOK A SERVICE</h1>
-      <button>View Packages</button>
       {isToggled ? <ServiceStationForm /> : <HomeServiceForm />}
-      <ServicePackages />
-    </>
+      {/* <ServicePackages /> */}
+    </div>
   );
 };
 //-----------------------Conditional rendring-----------------/
