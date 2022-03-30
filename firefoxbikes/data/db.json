@@ -1,0 +1,67 @@
+{
+  "ServiceBooking": [
+    {
+      "customerName": "Madan Mohan",
+      "customerEmail": "madan_fw14_260@masai.school",
+      "customMobileNo": "9971501423",
+      "zipCode": "12121",
+      "invoiceNo": null,
+      "id": 1
+    },
+    {
+      "customerName": "Madan Mohan",
+      "customerEmail": "madan_fw14_260@masai.school",
+      "customMobileNo": "9971501423",
+      "StaticRangeState": "",
+      "StaticRangecity": "Mumbai",
+      "zipCode": "12121",
+      "bikeName": "BLACK WIDOW 20",
+      "purchasedForm": "OFFLINE",
+      "storeForService": "ACE KUDALE CAR PVT LTD - PUNE, 412307",
+      "invoiceNo": 12345,
+      "id": 2
+    },
+    {
+      "customerName": "Madan Mohan",
+      "customerEmail": "madan_fw14_260@masai.school",
+      "customMobileNo": "9971501423",
+      "StaticRangeState": "",
+      "StaticRangecity": "Mumbai",
+      "zipCode": "12121",
+      "bikeName": "BLACK WIDOW 20",
+      "purchasedForm": "OFFLINE",
+      "storeForService": "ACE KUDALE CAR PVT LTD - PUNE, 412307",
+      "invoiceNo": 12345,
+      "id": 3
+    },
+    {
+      "customerName": "maddy",
+      "customerEmail": "madandoor7s@gmail.com",
+      "customMobileNo": "9971501423",
+      "StaticRangeState": "Maharashtra",
+      "StaticRangecity": "Pune",
+      "zipCode": "121321",
+      "bikeName": "AXXIS 26 D",
+      "purchasedForm": "OFFLINE",
+      "storeForService": "ACE KUDALE CAR PVT LTD - PUNE, 412307",
+      "invoiceNo": 123456,
+      "id": 4
+    }
+  ],
+  "homeservice": [
+    {
+      "customerName": "Madan Mohan",
+      "customerEmail": "madan_fw14_260@masai.school",
+      "customMobileNo": "9971501423",
+      "customerAddress": "hahahhhadjblhflfvhdkfjnvlidfhalnfgalkgrihgnrgfljkadrhbnv",
+      "zipCode": "110001",
+      "StaticRangeState": "Maharashtra",
+      "StaticRangecity": "Kolkata",
+      "bikeName": "ALFA 20",
+      "dateOfService": "3212-02-12",
+      "timeSlot": "12.30PM-2.30PM",
+      "selectPackage": "standardGearless",
+      "id": 1
+    }
+  ]
+}
