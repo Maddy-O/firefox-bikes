@@ -7,7 +7,9 @@ const productSchema = new mongoose.Schema(
     color: [{ type: String, required: true }],
     image: { type: String, required: true },
     price: { type: Number, required: true },
-    discount: { type: Number, required: true}
+    discount: { type: Number, required: true },
+    section: { type: String, required: true },
+    popular: { type: Boolean, required: true}
   },
   {
     versionKey: false,

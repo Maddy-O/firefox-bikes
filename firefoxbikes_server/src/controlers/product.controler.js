@@ -8,7 +8,6 @@ const Product = require("../models/product.model");
 
 router.get("", async (req, res) => {
   try {
-    console.log("Itemms")
     let items = await Product.find().lean().exec();
     return res.send(items);
   } catch (e) {
