@@ -1,0 +1,51 @@
+{
+  "ServiceBooking": [
+    {
+      "customerName": "Madan Mohan",
+      "customerEmail": "madan_fw14_260@masai.school",
+      "customMobileNo": "9971501423",
+      "zipCode": "12121",
+      "invoiceNo": null,
+      "id": 1
+    },
+    {
+      "customerName": "Madan Mohan",
+      "customerEmail": "madan_fw14_260@masai.school",
+      "customMobileNo": "9971501423",
+      "StaticRangeState": "",
+      "StaticRangecity": "Mumbai",
+      "zipCode": "12121",
+      "bikeName": "BLACK WIDOW 20",
+      "purchasedForm": "OFFLINE",
+      "storeForService": "ACE KUDALE CAR PVT LTD - PUNE, 412307",
+      "invoiceNo": 12345,
+      "id": 2
+    },
+    {
+      "customerName": "Madan Mohan",
+      "customerEmail": "madan_fw14_260@masai.school",
+      "customMobileNo": "9971501423",
+      "StaticRangeState": "",
+      "StaticRangecity": "Mumbai",
+      "zipCode": "12121",
+      "bikeName": "BLACK WIDOW 20",
+      "purchasedForm": "OFFLINE",
+      "storeForService": "ACE KUDALE CAR PVT LTD - PUNE, 412307",
+      "invoiceNo": 12345,
+      "id": 3
+    },
+    {
+      "customerName": "maddy",
+      "customerEmail": "madandoor7s@gmail.com",
+      "customMobileNo": "9971501423",
+      "StaticRangeState": "Maharashtra",
+      "StaticRangecity": "Pune",
+      "zipCode": "121321",
+      "bikeName": "AXXIS 26 D",
+      "purchasedForm": "OFFLINE",
+      "storeForService": "ACE KUDALE CAR PVT LTD - PUNE, 412307",
+      "invoiceNo": 123456,
+      "id": 4
+    }
+  ]
+}

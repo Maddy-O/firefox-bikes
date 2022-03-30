@@ -1,5 +1,5 @@
 import { Navbar } from "../Navbar/Navbar";
-import { Home } from "../HomePage/Home";
+import { BikeService } from "../BikeService/BikeService";
 import { Route, Routes } from "react-router-dom";
 
 export const Routers = () => {
@@ -8,11 +8,11 @@ export const Routers = () => {
       <header>
         <Navbar />
       </header>
-      <body>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </body>
+      {/* <body> */}
+      <Routes>
+        <Route path="/" element={<BikeService />} />
+      </Routes>
+      {/* </body> */}
     </>
   );
 };
