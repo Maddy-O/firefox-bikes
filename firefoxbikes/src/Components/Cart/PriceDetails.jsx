@@ -28,7 +28,9 @@ export const PriceDetails = () => {
             <p style={{marginLeft: '145px', marginTop:'0px'}}>Rs.00</p>
           </div>
         </div>
-        <hr style={{margin: '10px',}} />
+
+        <hr style={{ margin: '10px', }} />
+        
         {/* Total Price */}
         <div style={{
           display: 'flex', padding: '3px',
@@ -48,8 +50,10 @@ export const PriceDetails = () => {
           cursor: 'pointer',
         }}
         >PROCEED TO CHECKOUT</button>
+
         <hr style={{margin: '20px 0px', width: '100%'}} />
         {/* Coupon Codes */}
+
         <div className="Coupon">
           <h2 style={{marginLeft: '18px'}}>Coupon Codes</h2>
           <input type="text" placeholder="Enter Coupon Code"
