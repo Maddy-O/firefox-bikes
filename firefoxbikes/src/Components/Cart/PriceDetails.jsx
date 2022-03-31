@@ -1,36 +1,69 @@
 export const PriceDetails = () => {
   return (
     <>
-      <div className="Cart">
+      <div className="main-container"
+        style={{
+          width: '300px',
+          height: '560px',
+          backgroundColor: '#191919',
+          color: 'white',
+          padding: '10px',
+          borderRadius: '5px',
+        }}
+      >
         <div className="Price_Details">
-          <h3>Price Details</h3>
+          <h2 style={{marginLeft: '18px'}}>Price Details</h2>
         </div>
-        <div className="MRP">
-          <div>
-            <h5>Total MRP (Incl. GST)</h5>
-            <h5>Rs.25000</h5>
+        <div className="MRP" >
+          <div style={{ display: 'flex',  }} >
+            <p style={{marginLeft: '18px', fontSize: '14px'}}>Total MRP (Incl. GST)</p>
+            <p style={{marginLeft: '90px'}}>Rs.25000</p>
           </div>
-          <div>
-            <h5>Discount/Promotion</h5>
-            <h5>-Rs0.00</h5>
+          <div  style={{ display: 'flex',  }} >
+            <p style={{marginLeft: '18px', marginTop:'0px', fontSize: '14px'}}>Discount/Promotion</p>
+            <p style={{marginLeft: '100px', marginTop:'0px'}}>-Rs0.00</p>
           </div>
-          <div>
-            <h5>Deliver Charges</h5>
-            <h5>Rs.00</h5>
+          <div style={{ display: 'flex',  }} >
+            <p style={{marginLeft: '18px', marginTop:'0px', fontSize: '14px'}}>Deliver Charges</p>
+            <p style={{marginLeft: '145px', marginTop:'0px'}}>Rs.00</p>
           </div>
         </div>
-        <hr />
+        <hr style={{margin: '10px',}} />
         {/* Total Price */}
-        <div>
-          <h3>Total</h3>
-          <h3>Rs.25000</h3>
+        <div style={{
+          display: 'flex', padding: '3px',
+          fontSize: '20px', marginBottom: '10px'
+        }}>
+          <h3 style={{marginLeft: '18px'}}>Total</h3>
+          <h3 style={{marginLeft: '120px'}}>Rs.25000</h3>
         </div>
-        <button>PROCEED TO CHECKOUT</button>
-        <hr />
+        <button style={{
+          marginLeft: '20px', 
+          padding: '10px 55px',
+          borderRadius: '5px', border: 'none',
+          color: 'white',
+          backgroundColor: 'tomato',
+          fontWeight: 'bold',
+          fontSize: '12px', 
+          cursor: 'pointer',
+        }}
+        >PROCEED TO CHECKOUT</button>
+        <hr style={{margin: '20px 0px', width: '100%'}} />
         {/* Coupon Codes */}
         <div className="Coupon">
-          <h3>Coupon Codes</h3>
-          <input type="text" placeholder="Enter Coupon Code" />
+          <h2 style={{marginLeft: '18px'}}>Coupon Codes</h2>
+          <input type="text" placeholder="Enter Coupon Code"
+            style={{
+              marginLeft: '18px',
+              padding: '10px 35px',
+              borderRadius: '5px', border: 'none',
+              color: 'white',
+              fontSize: '15px',
+              background: 'transparent',
+              border: '0.5px solid white',
+              textAlign: 'left',
+            }}
+          />
         </div>
       </div>
     </>
