@@ -17,15 +17,15 @@ export const PriceDetails = () => {
         <div className="MRP" >
           <div style={{ display: 'flex',  }} >
             <p style={{marginLeft: '18px', fontSize: '14px'}}>Total MRP (Incl. GST)</p>
-            <p style={{marginLeft: '90px'}}>Rs.25000</p>
+            <p style={{marginLeft: '90px'}}>₹25000</p>
           </div>
           <div  style={{ display: 'flex',  }} >
             <p style={{marginLeft: '18px', marginTop:'0px', fontSize: '14px'}}>Discount/Promotion</p>
-            <p style={{marginLeft: '100px', marginTop:'0px'}}>-Rs0.00</p>
+            <p style={{marginLeft: '100px', marginTop:'0px'}}>-₹ 0.00</p>
           </div>
           <div style={{ display: 'flex',  }} >
             <p style={{marginLeft: '18px', marginTop:'0px', fontSize: '14px'}}>Deliver Charges</p>
-            <p style={{marginLeft: '145px', marginTop:'0px'}}>Rs.00</p>
+            <p style={{marginLeft: '145px', marginTop:'0px'}}>₹00</p>
           </div>
         </div>
 
@@ -37,7 +37,7 @@ export const PriceDetails = () => {
           fontSize: '20px', marginBottom: '10px'
         }}>
           <h3 style={{marginLeft: '18px'}}>Total</h3>
-          <h3 style={{marginLeft: '120px'}}>Rs.25000</h3>
+          <h3 style={{marginLeft: '120px'}}>₹25000</h3>
         </div>
         <button style={{
           marginLeft: '20px', 

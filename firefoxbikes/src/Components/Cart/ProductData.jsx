@@ -28,7 +28,7 @@ export const ProductData = ({ _id, title, price, color, image, section }) => {
           ></div>
         </div>
         <div style={{ marginLeft: "50%" }}>
-          <p>Price</p>
+          <p style={{fontWeight: "bold"}}>Price</p>
           <h4>₹{price}</h4>
         </div>
       </div>
