@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Axios from "axios";
-
+import "./HomServiceForm.css";
 export const HomeServiceForm = () => {
   const url = "http://localhost:8080/homeservice ";
   const [data, setData] = useState({
@@ -75,16 +75,17 @@ export const HomeServiceForm = () => {
         </a>
       </div>
       <form
+        className="homeServiceForm"
         onSubmit={(e) => submit(e)}
-        style={{
-          width: "80%",
-          margin: "auto",
-          display: "flex",
-          justifyContent: "center",
-          flexWrap: "wrap",
-          gap: "1rem",
-          color: "red",
-        }}
+        // style={{
+        //   width: "80%",
+        //   margin: "auto",
+        //   display: "flex",
+        //   justifyContent: "center",
+        //   flexWrap: "wrap",
+        //   gap: "1rem",
+        //   color: "red",
+        // }}
       >
         <input
           onChange={(e) => handleInduptChange(e)}

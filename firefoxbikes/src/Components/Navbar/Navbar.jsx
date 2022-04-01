@@ -1,4 +1,5 @@
 import logo from "../Navbar/logo.svg";
+import BikeService from "../BikeService/BikeService";
 
 export const Navbar = () => {
   return (
@@ -14,7 +15,7 @@ export const Navbar = () => {
         <img src={logo} alt="Firefox Logo" style={{ width: "100%" }} />
       </div>
       <div>
-        <p>BIKE SERVICE</p>
+        <a href="../BikeService">BIKE SERVICE</a>
       </div>
       <div>
         <p>#GOBIKING TRIBE</p>
@@ -26,7 +27,7 @@ export const Navbar = () => {
         <p>Profile</p>
       </div>
       <div>
-        <p>Cart</p>
+        <a href="../Cart">Cart</a>
       </div>
     </div>
   );
