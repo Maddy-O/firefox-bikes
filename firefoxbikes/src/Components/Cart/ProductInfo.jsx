@@ -6,18 +6,18 @@ export const ProductInfo = () => {
   const [bikes, setBikes] = useState([]);
 
   useEffect(() => getData(), []);
-  let totalPrice = 0;
-
+  const [total, setTotal] = useState(0);
   const getData = async () => {
     await axios.get("http://localhost:4500/cart").then((res) => {
 
       setBikes([...res.data]);
       console.log(res.data);
-
+      let sum = 0;
       for (let i in res.data) {
-        totalPrice += +(res.data[i].price);
+        sum += +(res.data[i].price);
       }
-      console.log((totalPrice));
+      setTotal(sum);
+      
     });
   };
 
@@ -38,7 +38,7 @@ export const ProductInfo = () => {
               }}
             >
               <img
-                src="https://cdn-icons.flaticon.com/png/512/649/premium/649931.png?token=exp=1648736667~hmac=8031e74dbb85d1353b53d35414805d83"
+                src="https://cdn-icons.flaticon.com/png/512/2838/premium/2838895.png?token=exp=1648786394~hmac=8e1bb39864a83e817afcb4e6b89f44b3"
                 alt=""
                 style={{ width: "27px", color: "#fff", margin: "10px" }}
               />
@@ -117,7 +117,7 @@ export const ProductInfo = () => {
           <div>
             <h3>Total</h3>
           </div>
-          <p style={{ fontSize: "20px", fontWeight: "bold" }}>₹{totalPrice}</p>
+          <p style={{ fontSize: "20px", fontWeight: "bold" }}>₹{total}</p>
         </div>
       </div>
     </>
