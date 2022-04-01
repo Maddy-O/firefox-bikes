@@ -1,7 +1,13 @@
 import heartIcon from "./Images/heart.png";
 import deleteIcon from "./Images/delete.png";
+import axios from "axios";
 
-export const ProductData = ({ _id, title, price, color, image, section }) => {
+export const ProductData = ({ id, title, price, color, image, section, deleteFromCart }) => {
+  
+  const deleteFromCartbyid=()=>{
+    deleteFromCart (id);
+  }
+
   return (
     <>
       <div className="middle" style={{ display: "flex", margin: "22px" }}>
@@ -18,43 +24,67 @@ export const ProductData = ({ _id, title, price, color, image, section }) => {
 
         {/* Product Data */}
         <div className="product-data">
-          
-          <div className="name-price" style={{
-            display: "flex", width: "550px", justifyContent: "space-between",
-          }}>
-          <div style={{ marginLeft: "30px"}}>
-            <h3>
-              {title} {section}
-            </h3>
-            <div
-              style={{
-                width: "22px",
-                height: "22px",
-                borderRadius: "50%",
-                backgroundColor: `${color[0]}`,
-              }}
-            ></div>
-          </div>
-          <div style={{ marginLeft: "50%" }}>
-            <p style={{ }}>Price</p>
-            <h4>₹{price}</h4>
-          </div>
+          <div
+            className="name-price"
+            style={{
+              display: "flex",
+              width: "550px",
+              justifyContent: "space-between",
+            }}
+          >
+            <div style={{ marginLeft: "30px" }}>
+              <h3>
+                {title} {section}
+              </h3>
+              <div
+                style={{
+                  width: "22px",
+                  height: "22px",
+                  borderRadius: "50%",
+                  backgroundColor: `${color[0]}`,
+                }}
+              ></div>
+            </div>
+            <div style={{ marginLeft: "50%" }}>
+              <p style={{}}>Price</p>
+              <h4>₹{price}</h4>
+            </div>
           </div>
 
           {/* DELETE Button and Wishlist Button */}
-          <div className="delete" style={{
-            display: "flex", justifyContent: "space-between",
-            marginTop: '22px', width: "500px", marginLeft: '22px'
-          }}>
-            <button style={{border: "none", backgroundColor: "transparent", marginLeft: '2px', cursor: "pointer"}} >
+          <div
+            className="delete"
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: "22px",
+              width: "500px",
+              marginLeft: "22px",
+            }}
+          >
+            <button
+              style={{
+                border: "none",
+                backgroundColor: "transparent",
+                marginLeft: "2px",
+                cursor: "pointer",
+              }}
+            >
               <img
                 src={heartIcon}
                 alt=""
                 style={{ width: "22px", height: "22px" }}
               />
             </button>
-            <button style={{border: "none", backgroundColor: "transparent", marginLeft: '30px', cursor: "pointer"}} >
-              <img
+            <button
+              style={{
+                border: "none",
+                backgroundColor: "transparent",
+                marginLeft: "30px",
+                cursor: "pointer",
+              }}
+            >
+              <img onClick={deleteFromCartbyid}
                 src={deleteIcon}
                 alt=""
                 style={{ width: "22px", height: "22px" }}

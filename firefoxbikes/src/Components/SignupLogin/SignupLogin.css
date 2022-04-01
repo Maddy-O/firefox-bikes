@@ -1,9 +1,30 @@
 
 .SignupLogin{
      background: #252525;
+     background-image: url("https://www.firefoxbikes.com/on/demandware.static/Sites-HeroFirefox-Site/-/default/dw868744a7/assets/images/bike-infografy.png");
+     background-repeat: no-repeat;
+     display: flex;
+     gap: 20%;
+     padding: 5%;
+     padding-left:25% ;
+}
+.SignupLogin-hello-div{
+     color: whitesmoke;
+}
+.SignupLogin-hello-div>h1{
+     font-size: 60px;
+}
+.SignupLogin-hello{
+     margin-bottom: -30px;
+     
+}
+.SignupLogin-there{
+     margin-top: -20px;
+     padding-left: 5%;
+     margin-bottom: 0px;
 }
 .SignupLogin-div{
-     background-image: url("https://www.firefoxbikes.com/on/demandware.static/Sites-HeroFirefox-Site/-/default/dw868744a7/assets/images/bike-infografy.png");
-     padding-left: 60%;
+
+     /* padding-left: 60%; */
      height: 750px;
 }
