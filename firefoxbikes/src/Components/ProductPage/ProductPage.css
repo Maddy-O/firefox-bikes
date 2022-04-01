@@ -1,0 +1,21 @@
+.ProductPage{
+     padding-left:8%;
+     padding-right: 10%;
+     border: 1px solid ;
+}
+.ProductPage-Top{
+     display: flex;
+     justify-content: space-between;
+     font-size: 20px;
+     font-weight: 500;
+}
+
+#new-arrival{
+     font-size: 17px;
+     padding: 5px;
+}
+.ProductPage-Container{
+     display: grid;
+     grid-template-columns: repeat(3,1fr);
+     grid-gap: 3%;
+}
