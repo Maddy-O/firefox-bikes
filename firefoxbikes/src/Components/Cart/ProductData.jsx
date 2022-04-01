@@ -19,7 +19,9 @@ export const ProductData = ({ _id, title, price, color, image, section }) => {
         {/* Product Data */}
         <div className="product-data">
           
-          <div className="name-price" style={{display: "flex"}} >
+          <div className="name-price" style={{
+            display: "flex", width: "700px"
+          }}>
           <div style={{ marginLeft: "30px"}}>
             <h3>
               {title} {section}
@@ -40,15 +42,18 @@ export const ProductData = ({ _id, title, price, color, image, section }) => {
           </div>
 
           {/* DELETE Button and Wishlist Button */}
-          <div className="delete" style={{ display: "flex", justifyContent: "space-around" }}>
-            <button style={{border: "none", backgroundColor: "transparent",}} >
+          <div className="delete" style={{
+            display: "flex", justifyContent: "space-between",
+            marginTop: '20px', width: "500px", marginLeft: '22px'
+          }}>
+            <button style={{border: "none", backgroundColor: "transparent", marginLeft: '2px', cursor: "pointer"}} >
               <img
                 src={heartIcon}
                 alt=""
                 style={{ width: "25px", height: "30px" }}
               />
             </button>
-            <button style={{border: "none", backgroundColor: "transparent",}} >
+            <button style={{border: "none", backgroundColor: "transparent", marginLeft: '30px', cursor: "pointer"}} >
               <img
                 src={deleteIcon}
                 alt=""
