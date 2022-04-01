@@ -1,5 +1,5 @@
 import logo from "../Navbar/logo.svg";
-import BikeService from "../BikeService/BikeService";
+// import BikeService from "../BikeService/BikeService";
 
 export const Navbar = () => {
   return (

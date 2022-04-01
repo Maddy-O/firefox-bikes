@@ -63,5 +63,21 @@
       "selectPackage": "standardGearless",
       "id": 1
     }
+  ],
+  "cardpayment": [
+    {
+      "cardNum": "12345",
+      "expiryDate": "12345",
+      "enterCvv": "123",
+      "nameOnCard": 123545,
+      "tnc": "",
+      "id": 1
+    }
+  ],
+  "upipayment": [
+    {
+      "upi": "",
+      "id": 1
+    }
   ]
 }
