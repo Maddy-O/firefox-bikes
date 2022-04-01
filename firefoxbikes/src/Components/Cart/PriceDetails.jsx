@@ -9,6 +9,7 @@ export const PriceDetails = () => {
           color: 'white',
           padding: '10px',
           borderRadius: '5px',
+          fontFamily: 'Oswald', 
         }}
       >
         <div className="Price_Details">
@@ -21,11 +22,11 @@ export const PriceDetails = () => {
           </div>
           <div  style={{ display: 'flex',  }} >
             <p style={{marginLeft: '18px', marginTop:'0px', fontSize: '14px'}}>Discount/Promotion</p>
-            <p style={{marginLeft: '100px', marginTop:'0px'}}>-₹ 0.00</p>
+            <p style={{marginLeft: '100px', marginTop:'0px'}}>-₹1200</p>
           </div>
           <div style={{ display: 'flex',  }} >
             <p style={{marginLeft: '18px', marginTop:'0px', fontSize: '14px'}}>Deliver Charges</p>
-            <p style={{marginLeft: '145px', marginTop:'0px'}}>₹00</p>
+            <p style={{marginLeft: '145px', marginTop:'0px'}}>₹0.00</p>
           </div>
         </div>
 
@@ -59,12 +60,12 @@ export const PriceDetails = () => {
           <input type="text" placeholder="Enter Coupon Code"
             style={{
               marginLeft: '18px',
+              border: '0.5px solid white',
               padding: '10px 35px',
-              borderRadius: '5px', border: 'none',
+              borderRadius: '5px', 
               color: 'white',
               fontSize: '15px',
               background: 'transparent',
-              border: '0.5px solid white',
               textAlign: 'left',
             }}
           />
