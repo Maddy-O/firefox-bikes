@@ -1,4 +1,10 @@
+import { useEffect, useState } from "react";
+
 export const PriceDetails = () => {
+
+  const cart_total = JSON.parse(localStorage.getItem("cart_total"));
+  console.log(cart_total)
+
   return (
     <>
       <div className="main-container"
@@ -9,7 +15,6 @@ export const PriceDetails = () => {
           color: 'white',
           padding: '10px',
           borderRadius: '5px',
-          fontFamily: 'Oswald', 
         }}
       >
         <div className="Price_Details">
@@ -18,15 +23,15 @@ export const PriceDetails = () => {
         <div className="MRP" >
           <div style={{ display: 'flex',  }} >
             <p style={{marginLeft: '18px', fontSize: '14px'}}>Total MRP (Incl. GST)</p>
-            <p style={{marginLeft: '90px'}}>₹25000</p>
+            <p style={{marginLeft: '90px'}}>₹{cart_total}</p>
           </div>
           <div  style={{ display: 'flex',  }} >
             <p style={{marginLeft: '18px', marginTop:'0px', fontSize: '14px'}}>Discount/Promotion</p>
-            <p style={{marginLeft: '100px', marginTop:'0px'}}>-₹1200</p>
+            <p style={{marginLeft: '100px', marginTop:'0px'}}>-₹ 0.00</p>
           </div>
           <div style={{ display: 'flex',  }} >
             <p style={{marginLeft: '18px', marginTop:'0px', fontSize: '14px'}}>Deliver Charges</p>
-            <p style={{marginLeft: '145px', marginTop:'0px'}}>₹0.00</p>
+            <p style={{marginLeft: '145px', marginTop:'0px'}}>₹00</p>
           </div>
         </div>
 
@@ -38,7 +43,7 @@ export const PriceDetails = () => {
           fontSize: '20px', marginBottom: '10px'
         }}>
           <h3 style={{marginLeft: '18px'}}>Total</h3>
-          <h3 style={{marginLeft: '120px'}}>₹25000</h3>
+          <h3 style={{marginLeft: '120px'}}>₹{cart_total}</h3>
         </div>
         <button style={{
           marginLeft: '20px', 
@@ -60,12 +65,12 @@ export const PriceDetails = () => {
           <input type="text" placeholder="Enter Coupon Code"
             style={{
               marginLeft: '18px',
-              border: '0.5px solid white',
               padding: '10px 35px',
-              borderRadius: '5px', 
+              borderRadius: '5px', border: 'none',
               color: 'white',
               fontSize: '15px',
               background: 'transparent',
+              border: '0.5px solid white',
               textAlign: 'left',
             }}
           />

@@ -8,10 +8,9 @@ export const Cart = () => {
         className="title"
         style={{
           width: "80%",
-          fontSize: "45px",
+          fontSize: "40px",
           fontWeight: "bold",
-          margin: "4% 10%",
-          fontFamily: 'Oswald',
+          margin: "2% 10%",
         }}
       >
         <div style={{ color: "#3f4351" }}>SHOPPING</div>
@@ -20,7 +19,7 @@ export const Cart = () => {
 
       <div
         className="Cart-main"
-        style={{ display: "flex", margin: "10%", gap: "5%" }}
+        style={{ display: "flex", margin: "10%" ,  gap: "5%" }}
       >
         <ProductInfo />
 

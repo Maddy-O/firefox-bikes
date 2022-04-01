@@ -8,19 +8,25 @@ export const ProductInfo = () => {
 
   useEffect(() => getData(), []);
   const [total, setTotal] = useState(0);
+  localStorage.setItem("cart_total",JSON.stringify(total))
   const getData = async () => {
-    await axios.get("http://localhost:4500/cart").then((res) => {
+    await axios.get("http://localhost:4500/cart").then(({data}) => {
 
-      setBikes([...res.data]);
-      console.log(res.data);
+      setBikes([...data]);
+      console.log(data);
       let sum = 0;
-      for (let i in res.data) {
-        sum += +(res.data[i].price);
+      for (let i in data) {
+        sum += +(data[i].price);
       }
       setTotal(sum);
-      
     });
   };
+  const deleteFromCart= async (id)=>{
+    await axios.delete(`http://localhost:4500/cart/${id}`).then((res)=>{
+      console.log(res);
+      getData();
+    })
+  }
 
   return (
     <>
@@ -102,6 +108,7 @@ export const ProductInfo = () => {
               color={e.color}
               image={e.image}
               section={e.section}
+              deleteFromCart={deleteFromCart}
             ></ProductData>
           ))}
         </div>
