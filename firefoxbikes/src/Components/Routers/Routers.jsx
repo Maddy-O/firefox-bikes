@@ -7,6 +7,7 @@ import Home from "../Home/Home";
 import CardPayment from "../PaymentPage/CardPayment";
 import PaymentPage from "../PaymentPage/PaymentPage";
 import UpiPayment from "../PaymentPage/UpiPayment";
+import { Address } from "../Address/Address";
 
 export const Routers = () => {
   return (
@@ -20,6 +21,7 @@ export const Routers = () => {
         <Route path="/paymentpage" element={<PaymentPage />} />
         <Route path="/cardpayment" element={<CardPayment />} />
         <Route path="/upipayment" element={<UpiPayment />} />
+        <Route path="/address" element={<Address/>}/>
       </Routes>
     </>
   );

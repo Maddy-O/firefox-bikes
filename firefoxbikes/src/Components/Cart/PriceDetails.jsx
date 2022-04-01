@@ -6,12 +6,13 @@ export const PriceDetails = () => {
       <div
         className="main-container"
         style={{
-          width: "300px",
-          height: "560px",
-          backgroundColor: "#191919",
-          color: "white",
-          padding: "10px",
-          borderRadius: "5px",
+          width: '300px',
+          height: '560px',
+          backgroundColor: '#191919',
+          color: 'white',
+          padding: '10px',
+          borderRadius: '5px',
+          fontFamily: 'Oswald', 
         }}
       >
         <div className="Price_Details">
@@ -24,6 +25,7 @@ export const PriceDetails = () => {
             </p>
             <p style={{ marginLeft: "90px" }}>₹25000</p>
           </div>
+
           <div style={{ display: "flex" }}>
             <p
               style={{ marginLeft: "18px", marginTop: "0px", fontSize: "14px" }}
@@ -39,6 +41,15 @@ export const PriceDetails = () => {
               Deliver Charges
             </p>
             <p style={{ marginLeft: "145px", marginTop: "0px" }}>₹00</p>
+
+          <div  style={{ display: 'flex',  }} >
+            <p style={{marginLeft: '18px', marginTop:'0px', fontSize: '14px'}}>Discount/Promotion</p>
+            <p style={{marginLeft: '100px', marginTop:'0px'}}>-₹1200</p>
+          </div>
+          <div style={{ display: 'flex',  }} >
+            <p style={{marginLeft: '18px', marginTop:'0px', fontSize: '14px'}}>Deliver Charges</p>
+            <p style={{marginLeft: '145px', marginTop:'0px'}}>₹0.00</p>
+
           </div>
         </div>
 
@@ -95,6 +106,7 @@ export const PriceDetails = () => {
               background: "transparent",
               border: "0.5px solid white",
               textAlign: "left",
+
             }}
           />
         </div>

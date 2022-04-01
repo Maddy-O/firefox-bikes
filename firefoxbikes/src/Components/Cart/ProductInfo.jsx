@@ -1,6 +1,7 @@
 import { ProductData } from "./ProductData";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import cartIcon from "./Images/shopping-cart.png";
 
 export const ProductInfo = () => {
   const [bikes, setBikes] = useState([]);
@@ -38,7 +39,7 @@ export const ProductInfo = () => {
               }}
             >
               <img
-                src="https://cdn-icons.flaticon.com/png/512/2838/premium/2838895.png?token=exp=1648786394~hmac=8e1bb39864a83e817afcb4e6b89f44b3"
+                src={cartIcon}
                 alt=""
                 style={{ width: "27px", color: "#fff", margin: "10px" }}
               />
