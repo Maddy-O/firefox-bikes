@@ -179,10 +179,16 @@ export const Address = () => {
           </div>
         </form>
       </div>
-      {/* Product Image and  Price Details */}
 
-      <div className="right-side" style={{width:"320px", height:"auto"}}>
-        <div>
+      {/* Product Image and  Price Details */}
+      <div className="right-side" style={{
+        width: "320px", height: "auto",
+        // backgroundColor: "#4a4949",
+        margin: '10px',
+        textAlign: 'center',
+      }}>
+        <div style={{marginBottom: "2px", backgroundColor: "#4a4949", color:'white', borderRadius:'5px', padding: '5px'}}>
+        <h3>Delivery Estimates</h3>
         {bikes.map((e) => (
             <AddressProduct
               key={e._id}

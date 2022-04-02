@@ -1,9 +1,11 @@
-// import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
+<<<<<<< HEAD
 export const PriceDetails = () => {
   const cart_total = JSON.parse(localStorage.getItem("cart_total"));
   console.log(cart_total);
+=======
+export const PriceDetails = ({cart_total}) => {
+>>>>>>> ab992fbd2f7836d6650a63bf256b28824989f5bd
 
   return (
     <>
@@ -60,6 +62,7 @@ export const PriceDetails = () => {
           <h3 style={{ marginLeft: "18px" }}>Total</h3>
           <h3 style={{ marginLeft: "120px" }}>₹{cart_total}</h3>
         </div>
+<<<<<<< HEAD
         
         <Link to="/address">
           <button
@@ -78,6 +81,19 @@ export const PriceDetails = () => {
             PROCEED TO CHECKOUT
           </button>
         </Link>
+=======
+        <button style={{
+          marginLeft: '20px', 
+          padding: '10px 55px',
+          borderRadius: '5px', border: 'none',
+          color: 'white',
+          backgroundColor: 'tomato',
+          fontWeight: 'bold',
+          fontSize: '12px', 
+          cursor: 'pointer',
+        }}
+        >PROCEED TO CHECKOUT</button>
+>>>>>>> ab992fbd2f7836d6650a63bf256b28824989f5bd
 
         <hr style={{ margin: "20px 0px", width: "100%" }} />
         {/* Coupon Codes */}
@@ -88,6 +104,7 @@ export const PriceDetails = () => {
             type="text"
             placeholder="Enter Coupon Code"
             style={{
+<<<<<<< HEAD
               marginLeft: "18px",
               padding: "10px 35px",
               borderRadius: "5px",
@@ -97,6 +114,16 @@ export const PriceDetails = () => {
               background: "transparent",
               border: "1px solid white",
               textAlign: "left",
+=======
+              marginLeft: '18px',
+              padding: '10px 35px',
+              borderRadius: '5px', border: 'none',
+              color: 'white',
+              fontSize: '15px',
+              background: 'transparent',
+              border: '0.5px solid white',
+              textAlign: 'left',
+>>>>>>> ab992fbd2f7836d6650a63bf256b28824989f5bd
             }}
           />
         </div>
