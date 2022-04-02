@@ -1,4 +1,12 @@
+// import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
+
 export const PriceDetails = () => {
+
+  const cart_total = JSON.parse(localStorage.getItem("cart_total"));
+  console.log(cart_total)
+
   return (
     <>
       <div className="main-container"
@@ -17,7 +25,7 @@ export const PriceDetails = () => {
         <div className="MRP" >
           <div style={{ display: 'flex',  }} >
             <p style={{marginLeft: '18px', fontSize: '14px'}}>Total MRP (Incl. GST)</p>
-            <p style={{marginLeft: '90px'}}>₹25000</p>
+            <p style={{marginLeft: '90px'}}>₹{cart_total}</p>
           </div>
           <div  style={{ display: 'flex',  }} >
             <p style={{marginLeft: '18px', marginTop:'0px', fontSize: '14px'}}>Discount/Promotion</p>
@@ -37,8 +45,9 @@ export const PriceDetails = () => {
           fontSize: '20px', marginBottom: '10px'
         }}>
           <h3 style={{marginLeft: '18px'}}>Total</h3>
-          <h3 style={{marginLeft: '120px'}}>₹25000</h3>
+          <h3 style={{marginLeft: '120px'}}>₹{cart_total}</h3>
         </div>
+        <Link to="/address">
         <button style={{
           marginLeft: '20px', 
           padding: '10px 55px',
@@ -50,6 +59,7 @@ export const PriceDetails = () => {
           cursor: 'pointer',
         }}
         >PROCEED TO CHECKOUT</button>
+        </Link>
 
         <hr style={{margin: '20px 0px', width: '100%'}} />
         {/* Coupon Codes */}
@@ -64,7 +74,7 @@ export const PriceDetails = () => {
               color: 'white',
               fontSize: '15px',
               background: 'transparent',
-              border: '0.5px solid white',
+              border: '1px solid white',
               textAlign: 'left',
             }}
           />

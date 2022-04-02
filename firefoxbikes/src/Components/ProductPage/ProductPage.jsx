@@ -40,8 +40,14 @@ export const ProductPage = () =>{
      // console.log("products",products)
      return(
           <div className="ProductPage">
+               <div>
+                    <img 
+                    style={{width:"100%", marginBottom:"-10px"}}
+                     src="productpageimage.png" alt="" />
+                    <img style={{width:"100%"}} src="strip.png" alt="" />
+               </div>
                <div className="ProductPage-Top">
-                    <div className="ProductPage-Top-mb">MOUNTAIN BIKES</div>
+                    <div className="ProductPage-Top-mb">GRAVEL BIKES</div>
                     <div className="ProductPage-Top-na">
                          <select onChange={sortFunction}  id="new-arrival">
                               <option value="new-arrival">NEW ARRIVAL</option>

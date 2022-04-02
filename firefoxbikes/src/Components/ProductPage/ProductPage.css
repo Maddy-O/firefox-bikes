@@ -1,9 +1,10 @@
 .ProductPage{
-     padding-left:8%;
-     padding-right: 10%;
+     
      border: 1px solid ;
 }
 .ProductPage-Top{
+     padding-left:8%;
+     padding-right: 10%;
      display: flex;
      justify-content: space-between;
      font-size: 20px;
@@ -15,6 +16,8 @@
      padding: 5px;
 }
 .ProductPage-Container{
+     padding-left:8%;
+     padding-right: 10%;
      display: grid;
      grid-template-columns: repeat(3,1fr);
      grid-gap: 3%;

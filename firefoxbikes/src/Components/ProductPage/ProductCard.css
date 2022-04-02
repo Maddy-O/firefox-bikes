@@ -47,7 +47,9 @@
      border: none;
      border-radius: 2px;
      cursor: pointer;
+     color: black;
 }
+
 #wish_list:active {
      background-color: #f8673b;
      border-radius: 50%;
