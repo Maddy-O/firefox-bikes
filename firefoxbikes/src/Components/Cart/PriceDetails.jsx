@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 
 export const PriceDetails = () => {
 
@@ -45,6 +47,7 @@ export const PriceDetails = () => {
           <h3 style={{marginLeft: '18px'}}>Total</h3>
           <h3 style={{marginLeft: '120px'}}>₹{cart_total}</h3>
         </div>
+        <Link to="/address">
         <button style={{
           marginLeft: '20px', 
           padding: '10px 55px',
@@ -56,6 +59,7 @@ export const PriceDetails = () => {
           cursor: 'pointer',
         }}
         >PROCEED TO CHECKOUT</button>
+        </Link>
 
         <hr style={{margin: '20px 0px', width: '100%'}} />
         {/* Coupon Codes */}
@@ -70,7 +74,7 @@ export const PriceDetails = () => {
               color: 'white',
               fontSize: '15px',
               background: 'transparent',
-              border: '0.5px solid white',
+              border: '1px solid white',
               textAlign: 'left',
             }}
           />
