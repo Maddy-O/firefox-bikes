@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { DeliverServices } from "./DeliverAndServices";
 import { PriceDetails } from "./PriceDetails";
 import { ProductInfo } from "./ProductInfo";
 
@@ -16,7 +17,7 @@ export const Cart = () => {
           width: "80%",
           fontSize: "40px",
           fontWeight: "bold",
-          margin: "2% 10%",
+          margin: "1% 10%",
         }}
       >
         <div style={{ color: "#3f4351" }}>SHOPPING</div>
@@ -25,7 +26,7 @@ export const Cart = () => {
 
       <div
         className="Cart-main"
-        style={{ display: "flex", margin: "10%" ,  gap: "5%" }}
+        style={{ display: "flex", margin: "8%" ,  gap: "5%" }}
       >
         <ProductInfo totalPrice={totalPrice}/>
 
@@ -33,6 +34,7 @@ export const Cart = () => {
           <PriceDetails cart_total={cart_total} />
         </div>
       </div>
+      <DeliverServices/>
     </>
   );
 };

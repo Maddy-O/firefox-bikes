@@ -31,7 +31,7 @@ export const ProductInfo = ({ totalPrice }) => {
 
   return (
     <>
-      <div style={{ width: "780px", height: "auto", border: "1px solid red" }}>
+      <div style={{ width: "780px", height: "auto",}}>
         {/* Cart, Address & Payment Chain */}
         <div className="top" style={{ display: "flex", margin: "20px" }}>
           <div className="cart" style={{ display: "flex" }}>
@@ -95,7 +95,7 @@ export const ProductInfo = ({ totalPrice }) => {
             <h3>PAYMENT</h3>
           </div>
         </div>
-        <hr />
+        <hr style={{width: '90%'}} />
 
         {/* Middle DIV about product Info */}
 
@@ -113,7 +113,7 @@ export const ProductInfo = ({ totalPrice }) => {
             ></ProductData>
           ))}
         </div>
-        <hr />
+        <hr style={{width: '90%'}} />
         {/* Total Amount of all products */}
         <div
           className="bottom"

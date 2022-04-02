@@ -28,7 +28,7 @@ export const PriceDetails = ({cart_total}) => {
           </div>
           <div style={{ display: 'flex',  }} >
             <p style={{marginLeft: '18px', marginTop:'0px', fontSize: '14px'}}>Deliver Charges</p>
-            <p style={{marginLeft: '145px', marginTop:'0px'}}>₹00</p>
+            <p style={{marginLeft: '135px', marginTop:'0px'}}>₹0.00</p>
           </div>
         </div>
 
