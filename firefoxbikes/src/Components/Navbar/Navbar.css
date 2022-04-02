@@ -1,0 +1,29 @@
+
+.Navbar_real{
+     padding: 1%;
+     background: black;
+     display: flex;
+     position: sticky;
+     
+}
+.Navbar_middle_div{
+     margin-left: 15%;
+     display: grid;
+     grid-template-columns: repeat(4,1fr);
+}
+.Navbar_middle_text{
+     text-decoration: none;
+     text-align: center;
+     color: orangered;
+}
+.Navbar_icon_div{
+     margin-left: 15%;
+     display: flex;
+     gap: 20%;
+}
+.Navbar_icons{
+     height: 30px;
+}
+/* .vimeoVideoUrl1{
+
+} */
