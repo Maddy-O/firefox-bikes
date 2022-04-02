@@ -8,8 +8,8 @@ const Product = require("../models/product.model");
 
 router.get("", async (req, res) => {
   try {
-    let items = await Product.find().lean().exec();
-    return res.send(items);
+    let item = await Product.find().lean().exec();
+    return res.send(item);
   } catch (e) {
     return res.status(500).send(e.message);
   }
@@ -23,7 +23,6 @@ router.get("/:id", async (req, res) => {
     return res.status(500).send(e.message);
   }
 });
-
 
 router.post("", async (req, res) => {
   try {
@@ -57,6 +56,5 @@ router.delete("/:id", async (req, res) => {
     return res.status(500).send(e.message);
   }
 });
-
 
 module.exports = router;
