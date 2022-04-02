@@ -16,13 +16,11 @@ export const Cart = () => {
         <div style={{ color: "#3f4351" }}>SHOPPING</div>
         <div style={{ color: "silver" }}>CART</div>
       </div>
-
       <div
         className="Cart-main"
         style={{ display: "flex", margin: "10%" ,  gap: "5%" }}
       >
         <ProductInfo />
-
         <div className="right-container">
           <PriceDetails />
         </div>
