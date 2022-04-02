@@ -187,7 +187,7 @@ export const Address = () => {
         margin: '10px',
         textAlign: 'center',
       }}>
-        <div style={{marginBottom: "2px", backgroundColor: "#4a4949", color:'white', borderRadius:'5px', padding: '5px'}}>
+        <div style={{ backgroundColor: "#4a4949", color:'white', borderRadius:'5px', padding: '5px'}}>
         <h3>Delivery Estimates</h3>
         {bikes.map((e) => (
             <AddressProduct
@@ -199,7 +199,7 @@ export const Address = () => {
           ))}
         </div>
 
-        <div className="price" style={{ marginTop: '3px' }}>
+        <div className="price" style={{ marginTop: '1px' }}>
           <AddressPrice/>
         </div>
       </div>
