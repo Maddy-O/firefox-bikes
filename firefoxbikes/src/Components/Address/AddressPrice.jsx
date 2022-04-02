@@ -60,7 +60,7 @@ export const AddressPrice = () => {
           <h3 style={{ marginLeft: "120px" }}>₹{cart_total}</h3>
         </div>
         
-        <Link to="/address">
+        <Link to="/paymentpage">
           <button
             style={{
               marginLeft: "20px",
