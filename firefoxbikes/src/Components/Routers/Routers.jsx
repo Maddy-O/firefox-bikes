@@ -9,7 +9,7 @@ import Home from "../Home/Home";
 import CardPayment from "../PaymentPage/CardPayment";
 import PaymentPage from "../PaymentPage/PaymentPage";
 import UpiPayment from "../PaymentPage/UpiPayment";
-import { Address } from "../Address/Address";
+import { Address } from "../Address/AddressDetails";
 
 export const Routers = () => {
   return (

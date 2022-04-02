@@ -1,4 +1,7 @@
-import { useState } from "react";
+import { AddressPrice } from "./AddressPrice";
+import { AddressProduct } from "./AddressProduct";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 export const Address = () => {
   const [formData, setFormData] = useState({
@@ -26,11 +29,31 @@ export const Address = () => {
     console.log(formData);
   };
 
+  const [bikes, setBikes] = useState([]);
+  useEffect(() => getData(), []);
+
+  const [total, setTotal] = useState(0);
+  localStorage.setItem("cart_total", JSON.stringify(total));
+
+  const getData = async () => {
+    await axios.get("http://localhost:4500/cart").then(({ data }) => {
+      setBikes([...data]);
+      console.log(data);
+      let sum = 0;
+      for (let i in data) {
+        sum += +data[i].price;
+      }
+      setTotal(sum);
+    });
+  };
+  
+
+
   return (
-    <>
-      <div className="address" style={{ marginLeft: "45%" }}>
-        <p>ADD</p>
-        <p>NEW ADDRESS</p>
+    <div className="address-container" style={{display: "flex"}}>
+      <div className="address" style={{ marginLeft: "35%" }}>
+        <div style={{ fontSize: "22px", fontWeight: "bold" }}>ADD</div>
+        <div style={{ fontSize: "22px", marginTop: "0px" }}>NEW ADDRESS</div>
 
         <form onSubmit={onSubmit}>
           <h3>Personal Details</h3>
@@ -47,10 +70,10 @@ export const Address = () => {
           <input onChange={onChange} id="phone" />
 
           <p>ZIP Code</p>
-          <input onChange={onChange} id="zip" />
+          <input onChange={onChange} id="zipcode" />
 
           <p>Address 1</p>
-          <input onChange={onChange} id="address1" />
+          <input onChange={onChange} id="address" />
 
           <p>Locality</p>
           <input onChange={onChange} id="locality" />
@@ -58,13 +81,22 @@ export const Address = () => {
           <div className="state">
             <p>State</p>
             <select>
-              id="state" onChange={onChange}
               <option>Select State</option>
-              <option>DELHI</option>
-              <option>KARNATAKA</option>
-              <option>TRIPURA</option>
-              <option>ODHISA</option>
-              <option>WEST BENGAL</option>
+              <option id="delhi" onChange={onChange}>
+                DELHI
+              </option>
+              <option id="karnataka" onChange={onChange}>
+                KARNATAKA
+              </option>
+              <option id="tripura" onChange={onChange}>
+                TRIPURA
+              </option>
+              <option id="odhisa" onChange={onChange}>
+                ODHISA
+              </option>
+              <option id="westBengal" onChange={onChange}>
+                WEST BENGAL
+              </option>
             </select>
           </div>
 
@@ -73,16 +105,29 @@ export const Address = () => {
             <select>
               id="city" onChange={onChange}
               <option>Select City</option>
-              <option>DELHI</option>
-              <option>BANGALORE</option>
-              <option>AGARTALA</option>
-              <option>BHUVANESHWAR</option>
-              <option>KOLKATA</option>
+              <option id="delhi" onChange={onChange}>
+                DELHI
+              </option>
+              <option id="bangalore" onChange={onChange}>
+                BANGALORE
+              </option>
+              <option id="agartala" onChange={onChange}>
+                AGARTALA
+              </option>
+              <option id="bhuvaneshwar" onChange={onChange}>
+                BHUVANESHWAR
+              </option>
+              <option id="kolkata" onChange={onChange}>
+                KOLKATA
+              </option>
             </select>
           </div>
 
           <h3>Address Type</h3>
-          <div className="radio-buttons">
+          <div
+            className="radio-buttons"
+            style={{ marginTop: "20px", marginBottom: "20px" }}
+          >
             <label>Work</label>
             <input type="radio" id="work" onChange={onChange} value="work" />
             <label>Home</label>
@@ -92,7 +137,12 @@ export const Address = () => {
           </div>
 
           <div className="checkbox">
-            <input type="checkbox" id="same" onChange={onChange} />
+            <input
+              type="checkbox"
+              id="same"
+              onChange={onChange}
+              style={{ marginBottom: "10px" }}
+            />
             <label>Make this my default address</label>
             <br />
             <input type="checkbox" id="different" onChange={onChange} />
@@ -137,6 +187,24 @@ export const Address = () => {
           </div>
         </form>
       </div>
-    </>
+      {/* Product Image and  Price Details */}
+
+      <div className="right-side" style={{width:"320px", height:"auto"}}>
+        <div>
+        {bikes.map((e) => (
+            <AddressProduct
+              key={e._id}
+              id={e._id}
+              title={e.title}
+              image={e.image}
+            ></AddressProduct>
+          ))}
+        </div>
+
+        <div className="price" style={{ marginTop: '3px' }}>
+          <AddressPrice/>
+        </div>
+      </div>
+    </div>
   );
 };

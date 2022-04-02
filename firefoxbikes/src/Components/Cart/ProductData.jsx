@@ -1,6 +1,5 @@
 import heartIcon from "./Images/heart.png";
 import deleteIcon from "./Images/delete.png";
-import axios from "axios";
 
 export const ProductData = ({ id, title, price, color, image, section, deleteFromCart }) => {
   

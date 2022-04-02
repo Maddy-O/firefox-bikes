@@ -1,7 +1,6 @@
-// import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-export const PriceDetails = () => {
+export const AddressPrice = () => {
   const cart_total = JSON.parse(localStorage.getItem("cart_total"));
   console.log(cart_total);
 
@@ -11,7 +10,7 @@ export const PriceDetails = () => {
         className="main-container"
         style={{
           width: "300px",
-          height: "560px",
+          height: "380px",
           backgroundColor: "#191919",
           color: "white",
           padding: "10px",
@@ -78,28 +77,6 @@ export const PriceDetails = () => {
             PROCEED TO CHECKOUT
           </button>
         </Link>
-
-        <hr style={{ margin: "20px 0px", width: "100%" }} />
-        {/* Coupon Codes */}
-
-        <div className="Coupon">
-          <h2 style={{ marginLeft: "18px" }}>Coupon Codes</h2>
-          <input
-            type="text"
-            placeholder="Enter Coupon Code"
-            style={{
-              marginLeft: "18px",
-              padding: "10px 35px",
-              borderRadius: "5px",
-              border: "none",
-              color: "white",
-              fontSize: "15px",
-              background: "transparent",
-              border: "1px solid white",
-              textAlign: "left",
-            }}
-          />
-        </div>
       </div>
     </>
   );

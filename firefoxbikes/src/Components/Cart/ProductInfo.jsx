@@ -8,25 +8,24 @@ export const ProductInfo = () => {
 
   useEffect(() => getData(), []);
   const [total, setTotal] = useState(0);
-  localStorage.setItem("cart_total",JSON.stringify(total))
+  localStorage.setItem("cart_total", JSON.stringify(total));
   const getData = async () => {
-    await axios.get("http://localhost:4500/cart").then(({data}) => {
-
+    await axios.get("http://localhost:4500/cart").then(({ data }) => {
       setBikes([...data]);
       console.log(data);
       let sum = 0;
       for (let i in data) {
-        sum += +(data[i].price);
+        sum += +data[i].price;
       }
       setTotal(sum);
     });
   };
-  const deleteFromCart= async (id)=>{
-    await axios.delete(`http://localhost:4500/cart/${id}`).then((res)=>{
+  const deleteFromCart = async (id) => {
+    await axios.delete(`http://localhost:4500/cart/${id}`).then((res) => {
       console.log(res);
       getData();
-    })
-  }
+    });
+  };
 
   return (
     <>
@@ -128,6 +127,7 @@ export const ProductInfo = () => {
           <p style={{ fontSize: "20px", fontWeight: "bold" }}>₹{total}</p>
         </div>
       </div>
+
     </>
   );
 };
