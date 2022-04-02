@@ -79,5 +79,20 @@
       "upi": "",
       "id": 1
     }
+  ],
+  "users": [
+    {
+      "firstName": "Rana",
+      "lastName": "Sarkar",
+      "phone": "7005055078",
+      "zipcode": "799132",
+      "address": "Bashpukur Purba Para",
+      "locality": "Kalyani",
+      "state": "Karnataka",
+      "city": "Bangalore",
+      "addressType": "",
+      "same": "on",
+      "id": 1
+    }
   ]
 }
