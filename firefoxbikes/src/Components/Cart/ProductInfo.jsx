@@ -3,17 +3,18 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import cartIcon from "./Images/shopping-cart.png";
 
-export const ProductInfo = () => {
+export const ProductInfo = ({totalPrice}) => {
   const [bikes, setBikes] = useState([]);
-
+  
   useEffect(() => getData(), []);
   const [total, setTotal] = useState(0);
-  localStorage.setItem("cart_total",JSON.stringify(total))
+  totalPrice(total)
+
   const getData = async () => {
     await axios.get("http://localhost:4500/cart").then(({data}) => {
 
       setBikes([...data]);
-      console.log(data);
+      // console.log(data);
       let sum = 0;
       for (let i in data) {
         sum += +(data[i].price);
