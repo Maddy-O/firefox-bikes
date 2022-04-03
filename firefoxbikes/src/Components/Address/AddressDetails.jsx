@@ -36,7 +36,7 @@ export const Address = () => {
   useEffect(() => showData(), []);
 
   const showData = () => {
-    axios.get("http://localhost:8080/users", formData).then((res) => {
+    axios.get("http://localhost:8080/users").then((res) => {
       setCreate(res.data);
     });
   };
