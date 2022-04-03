@@ -7,7 +7,9 @@ export const BikeService = () => {
   const [isToggled, setIsToggled] = useState(true);
   return (
     <>
-      <img src="bikes-banner_7.jpg"></img>
+      <div>
+        <img src="bikes-banner_7.jpg" style={{ width: "100%" }}></img>
+      </div>
       <div
         style={{
           boxSizing: "border-box",
@@ -32,7 +34,6 @@ export const BikeService = () => {
           paddingTop: "20px",
           textAlign: "left",
           textSizeAdjust: "100%",
-          width: "1903px",
         }}
       >
         <div
@@ -45,10 +46,7 @@ export const BikeService = () => {
             fontWeight: "500",
             height: "2529.94px",
             lineHeight: "18.5714px",
-            marginBottom: "0px",
-            marginLeft: "366.5px",
-            marginRight: "366.5px",
-            marginTop: "0px",
+            margin:"auto",
             outlineColor: "rgb(51, 51, 51)",
             outlineStyle: "none",
             outlineWidth: "0px",
@@ -58,7 +56,7 @@ export const BikeService = () => {
             paddingTop: "0px",
             textAlign: "left",
             textSizeAdjust: "100%",
-            width: "1170px",
+            width:"85%"
           }}
         >
           <div
@@ -68,7 +66,7 @@ export const BikeService = () => {
               display: "flex",
               fontFamily: "Montserrat, sans-serif",
               fontSize: "13px",
-              fontWeight: "500",
+              fontWeight: "bolder",
               lineHeight: "18.5714px",
               marginLeft: "-15px",
               marginRight: "-15px",
@@ -76,7 +74,6 @@ export const BikeService = () => {
               textAlign: "center",
               justifyContent: "center",
               textSizeAdjust: "100%",
-              width: "1170px",
             }}
           >
             <button
@@ -125,7 +122,6 @@ export const BikeService = () => {
             >
               HOME SERVICE
             </button>
-            {/* <ServicePackages /> */}
           </div>
           <div
             style={{
@@ -151,6 +147,7 @@ export const BikeService = () => {
               textAlign: "left",
               textSizeAdjust: "100%",
               unicodeBidi: "isolate",
+              width:"100%"
             }}
           >
             {isToggled ? <ServiceStationForm /> : <HomeServiceForm />}

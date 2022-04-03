@@ -45,248 +45,88 @@ export const HomeServiceForm = () => {
   };
 
   return (
-    <div
-      style={{
-        boxSizing: "border-box",
-        color: "rgb(51, 51, 51)",
-        direction: "ltr",
-        display: "block",
-        fontFamily: "Montserrat, sans-serif",
-        fontSize: "13px",
-        fontWeight: "500",
-        lineHeight: "18.5714px",
-        marginBottom: "0px",
-        marginLeft: "0px",
-        marginRight: "0px",
-        marginTop: "0px",
-        outlineColor: "rgb(51, 51, 51)",
-        outlineStyle: "none",
-        outlineWidth: "0px",
-        paddingBottom: "0px",
-        paddingLeft: "15px",
-        paddingRight: "15px",
-        paddingTop: "0px",
-        textAlign: "left",
-        textSizeAdjust: "100%",
-        unicodeBidi: "isolate",
-      }}
-    >
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <h4
-          style={{
-            boxSizing: "border-box",
-            color: "rgb(255, 80, 0)",
-            display: "inline-block",
-            fontFamily: "Montserrat, sans-serif",
-            fontSize: "25px",
-            fontWeight: "500",
-            lineHeight: "33.75px",
-            marginBlockEnd: "20px",
-            marginBlockStart: "20px",
-            marginBottom: "20px",
-            marginTop: "20px",
-            outlineColor: "rgb(255, 80, 0)",
-            outlineStyle: "none",
-            textAlign: "left",
-            textSizeAdjust: "100%",
-            textTransform: "uppercase",
-          }}
-        >
-          BOOK A SERVICE
-        </h4>
-        <a
-          style={{
-            marginLeft: "auto",
-            alignItems: "flex-start",
-            textDecoration: "none",
-            backgroundColor: "rgb(255, 80, 0)",
-            color: "rgb(255, 255, 255)",
-            cursor: "pointer",
-            display: "block",
-            fontFamily: "Montserrat, sans-serif",
-            fontSize: "14px",
-            fontWeight: "500",
-            height: "32.1875px",
-            lineHeight: "32.2px",
-            paddingLeft: "15px",
-            paddingRight: "15px",
-            textAlign: "center",
-            textRendering: "auto",
-            textSizeAdjust: "100%",
-            width: "136.812px",
-            writingMode: "horizontal-tb",
-          }}
-          href="#packages"
-        >
-          View Packages
-        </a>
-      </div>
-      <form
-        className="homeServiceForm"
-        onSubmit={(e) => submit(e)}
+    <div style={{ width: "85%", margin: "auto" }}>
+      <div
         style={{
-          boxSizing: "border-box",
-          color: "rgb(51, 51, 51)",
-          display: "inline",
-          fontFamily: "Montserrat, sans-serif",
-          fontSize: "13px",
-          fontWeight: "500",
-          height: "auto",
-          linHeight: "18.5714px",
-          outlineColor: "rgb(51, 51, 51)",
-          outlineStyle: "none",
-          textAlign: "left",
-          textSizeAdjust: "100%",
+          display: "flex",
+          justifyContent: "center",
+          height: "50px",
+          padding: "5px",
+          width: "100%",
+          marginBottom: "15px",
         }}
       >
-        <div>
+        <div style={{ width: "50%" }}>
+          <p style={{ color: "#ff5000", fontSize: "25px", textAlign: "left" }}>
+            BOOK A SERVICE
+          </p>
+        </div>
+        <div
+          style={{
+            width: "50%",
+            justifyContent: "right",
+          }}
+        >
+          <a
+            style={{
+              textDecoration: "none",
+            }}
+            href="#packages"
+          >
+            <p
+              style={{
+                border: "1px solid #ff5000",
+                width: "100px",
+                color: "white",
+                padding: "5px",
+                backgroundColor: "#ff5000",
+                textAlign: "center",
+                marginLeft: "75%",
+              }}
+            >
+              View Packages
+            </p>
+          </a>
+        </div>
+      </div>
+      {/*------------------- form --------------------*/}
+      <form onSubmit={(e) => submit(e)}>
+        <div className="stationServiceForm">
           <input
+            className="inputDetail"
             onChange={(e) => handleInduptChange(e)}
             id="customerName"
             value={data.customerName}
             placeholder="CUSTOMER NAME*"
             type="text"
-            style={{
-              appearance: "auto",
-              boxShadow: "none",
-              boxSizing: "border-box",
-              color: "rgb(0, 0, 0)",
-              cursor: "text",
-              display: "inline-block",
-              fontFamily: "Montserrat, sans-serif",
-              fontSize: "13px",
-              fontStretch: "100%",
-              fontWeight: "500",
-              height: "38px",
-              letterSpacing: "normal",
-              lineHeight: "18.5714px",
-              listStyleImage: "none",
-              listStylePosition: "outside",
-              listStyleType: "none",
-              outlineColor: "rgb(0, 0, 0)",
-              outlineStyle: "none",
-              paddingBottom: "10px",
-              paddingLeft: "10px",
-              paddingRight: "10px",
-              paddingTop: "10px",
-              textAlign: "start",
-              textIndent: "0px",
-              textRendering: "auto",
-              textShadow: "none",
-              textSizeAdjust: "100%",
-              textTransform: "uppercase",
-              verticalAlign: "middle",
-              width: "360px",
-              writingMode: "horizontal-tb",
-            }}
-          ></input>
-          {/* <br /> */}
+          />
           <input
+            className="inputDetail"
             onChange={(e) => handleInduptChange(e)}
             id="customerEmail"
             value={data.customerEmail}
             placeholder="CUSTOMER EMAIL*"
             type="text"
-            style={{
-              boxSizing: "border-box",
-              color: "rgb(51, 51, 51)",
-              display: "block",
-              float: "left",
-              fontFamily: "Montserrat, sans-serif",
-              fontSize: "13px",
-              fontWeight: "500",
-              height: "58px",
-              lineHeight: "18.5714px",
-              minHeight: "1px",
-              outlineColor: "rgb(51, 51, 51)",
-              outlineStyle: "none",
-              paddingLeft: "15px",
-              paddingRight: "15px",
-              position: "relative",
-              textAlign: "left",
-              textSizeAdjust: "100%",
-              width: "390px",
-            }}
-          ></input>
-          {/* <br /> */}
+          />
           <input
+            className="inputDetail"
             onChange={(e) => handleInduptChange(e)}
             id="customMobileNo"
             value={data.customMobileNo}
             placeholder="CUSTOMER MOBILE NO*"
             type="number"
-            style={{
-              boxSizing: "border-box",
-              color: "rgb(51, 51, 51)",
-              display: "block",
-              float: "left",
-              fontFamily: "Montserrat, sans-serif",
-              fontSize: "13px",
-              fontWeight: "500",
-              height: "58px",
-              lineHeight: "18.5714px",
-              minHeight: "1px",
-              outlineColor: "rgb(51, 51, 51)",
-              outlineStyle: "none",
-              paddingLeft: "15px",
-              paddingRight: "15px",
-              position: "relative",
-              textAlign: "left",
-              textSizeAdjust: "100%",
-              width: "390px",
-            }}
-          ></input>
-          {/* <br /> */}
+          />
           <textarea
+            className="inputDetail"
             onChange={(e) => handleInduptChange(e)}
             id="customerAddress"
             value={data.customerAddress}
             placeholder="ENTER YOUR ADDRESS*"
-            style={{
-              boxSizing: "border-box",
-              color: "rgb(51, 51, 51)",
-              display: "block",
-              float: "left",
-              fontFamily: "Montserrat, sans-serif",
-              fontSize: "13px",
-              fontWeight: "500",
-              height: "58px",
-              lineHeight: "18.5714px",
-              minHeight: "1px",
-              outlineColor: "rgb(51, 51, 51)",
-              outlineStyle: "none",
-              paddingLeft: "15px",
-              paddingRight: "15px",
-              position: "relative",
-              textAlign: "left",
-              textSizeAdjust: "100%",
-              width: "390px",
-            }}
-          ></textarea>
-          {/* <br /> */}
+          />
           <select
+            className="inputDetail"
             onChange={(e) => handleInduptChange(e)}
             id="zipCode"
-            style={{
-              boxSizing: "border-box",
-              color: "rgb(51, 51, 51)",
-              display: "block",
-              float: "left",
-              fontFamily: "Montserrat, sans-serif",
-              fontSize: "13px",
-              fontWeight: "500",
-              height: "58px",
-              lineHeight: "18.5714px",
-              minHeight: "1px",
-              outlineColor: "rgb(51, 51, 51)",
-              outlineStyle: "none",
-              paddingLeft: "15px",
-              paddingRight: "15px",
-              position: "relative",
-              textAlign: "left",
-              textSizeAdjust: "100%",
-              width: "390px",
-            }}
           >
             <option>SELECT ZIPCODE</option>
             <option value="110001">110001</option>
@@ -300,30 +140,10 @@ export const HomeServiceForm = () => {
             <option value="110009">110009</option>
             <option value="110010">110010</option>
           </select>
-          {/* <br /> */}
           <select
+            className="inputDetail"
             onChange={(e) => handleInduptChange(e)}
             id="StaticRangeState"
-            style={{
-              boxSizing: "border-box",
-              color: "rgb(51, 51, 51)",
-              display: "block",
-              float: "left",
-              fontFamily: "Montserrat, sans-serif",
-              fontSize: "13px",
-              fontWeight: "500",
-              height: "58px",
-              lineHeight: "18.5714px",
-              minHeight: "1px",
-              outlineColor: "rgb(51, 51, 51)",
-              outlineStyle: "none",
-              paddingLeft: "15px",
-              paddingRight: "15px",
-              position: "relative",
-              textAlign: "left",
-              textSizeAdjust: "100%",
-              width: "390px",
-            }}
           >
             <option>SELECT STATE</option>
             <option value="Delhi">Delhi</option>
@@ -337,30 +157,10 @@ export const HomeServiceForm = () => {
             <option value="Andhra Pradesh">Andhra Pradesh</option>
             <option value="Uttar Pradesh">Uttar Pradesh</option>
           </select>
-          {/* <br /> */}
           <select
+            className="inputDetail"
             onChange={(e) => handleInduptChange(e)}
             id="StaticRangecity"
-            style={{
-              boxSizing: "border-box",
-              color: "rgb(51, 51, 51)",
-              display: "block",
-              float: "left",
-              fontFamily: "Montserrat, sans-serif",
-              fontSize: "13px",
-              fontWeight: "500",
-              height: "58px",
-              lineHeight: "18.5714px",
-              minHeight: "1px",
-              outlineColor: "rgb(51, 51, 51)",
-              outlineStyle: "none",
-              paddingLeft: "15px",
-              paddingRight: "15px",
-              position: "relative",
-              textAlign: "left",
-              textSizeAdjust: "100%",
-              width: "390px",
-            }}
           >
             <option>SELECT CITY</option>
             <option value="Delhi(NCR)">Delhi(NCR)</option>
@@ -374,30 +174,10 @@ export const HomeServiceForm = () => {
             <option value="Visakhapatnam">Visakhapatnam</option>
             <option value="Kanpur">Kanpur</option>
           </select>
-          {/* <br /> */}
           <select
+            className="inputDetail"
             onChange={(e) => handleInduptChange(e)}
             id="bikeName"
-            style={{
-              boxSizing: "border-box",
-              color: "rgb(51, 51, 51)",
-              display: "block",
-              float: "left",
-              fontFamily: "Montserrat, sans-serif",
-              fontSize: "13px",
-              fontWeight: "500",
-              height: "58px",
-              lineHeight: "18.5714px",
-              minHeight: "1px",
-              outlineColor: "rgb(51, 51, 51)",
-              outlineStyle: "none",
-              paddingLeft: "15px",
-              paddingRight: "15px",
-              position: "relative",
-              textAlign: "left",
-              textSizeAdjust: "100%",
-              width: "390px",
-            }}
           >
             <option>BIKE NAME*</option>
             <option value="AXXIS 27.5 D">AXXIS 27.5 D</option>
@@ -413,89 +193,28 @@ export const HomeServiceForm = () => {
             <option value="BLACK WIDOW 20">BLACK WIDOW 20</option>
             <option value="BREEZE 24">BREEZE 24</option>
           </select>
-          {/* <p>Only applicable on Firefox Bikes</p> */}
-          {/* <br /> */}
           <input
+            className="inputDetail"
             onChange={(e) => handleInduptChange(e)}
             type="date"
             id="dateOfService"
             value={data.dateOfService}
             placeholder="DATE OF SERVICE*"
-            style={{
-              boxSizing: "border-box",
-              color: "rgb(51, 51, 51)",
-              display: "block",
-              float: "left",
-              fontFamily: "Montserrat, sans-serif",
-              fontSize: "13px",
-              fontWeight: "500",
-              height: "58px",
-              lineHeight: "18.5714px",
-              minHeight: "1px",
-              outlineColor: "rgb(51, 51, 51)",
-              outlineStyle: "none",
-              paddingLeft: "15px",
-              paddingRight: "15px",
-              position: "relative",
-              textAlign: "left",
-              textSizeAdjust: "100%",
-              width: "390px",
-            }}
-          ></input>
-          {/* <br /> */}
+          />
           <select
+            className="inputDetail"
             onChange={(e) => handleInduptChange(e)}
             id="timeSlot"
-            style={{
-              boxSizing: "border-box",
-              color: "rgb(51, 51, 51)",
-              display: "block",
-              float: "left",
-              fontFamily: "Montserrat, sans-serif",
-              fontSize: "13px",
-              fontWeight: "500",
-              height: "58px",
-              lineHeight: "18.5714px",
-              minHeight: "1px",
-              outlineColor: "rgb(51, 51, 51)",
-              outlineStyle: "none",
-              paddingLeft: "15px",
-              paddingRight: "15px",
-              position: "relative",
-              textAlign: "left",
-              textSizeAdjust: "100%",
-              width: "390px",
-            }}
           >
             <option>SELECT TIME SLOT*</option>
             <option value="9.30AM-11.30AM">9.30AM-11.30AM</option>
             <option value="12.30PM-2.30PM">12.30PM-2.30PM</option>
             <option value="3.30PM-5.30PM">3.30PM-5.30PM</option>
           </select>
-          {/* <br /> */}
           <select
+            className="inputDetail"
             onChange={(e) => handleInduptChange(e)}
             id="selectPackage"
-            style={{
-              boxSizing: "border-box",
-              color: "rgb(51, 51, 51)",
-              display: "block",
-              float: "left",
-              fontFamily: "Montserrat, sans-serif",
-              fontSize: "13px",
-              fontWeight: "500",
-              height: "58px",
-              lineHeight: "18.5714px",
-              minHeight: "1px",
-              outlineColor: "rgb(51, 51, 51)",
-              outlineStyle: "none",
-              paddingLeft: "15px",
-              paddingRight: "15px",
-              position: "relative",
-              textAlign: "left",
-              textSizeAdjust: "100%",
-              width: "390px",
-            }}
           >
             <option>SELECT PACKAGE</option>
             <option value="standardGearless">
@@ -511,128 +230,329 @@ export const HomeServiceForm = () => {
               PREMIUM SERVICE FOR GEARED BIKES (INR 1499)
             </option>
           </select>
-          {/* <br /> */}
-          {/* <br /> */}
         </div>
-        <div>
+        <div style={{ display: "flex" }}>
           <input
             id="tnc"
             type="checkbox"
             onChange={(e) => handleInduptChange(e)}
           />
-          <span>I accept Terms and Conditions</span>
-          {/* <br /> */}
-          {/* <br /> */}
-          <button type="submit">Book Service</button>
+          <div
+            style={{
+              display: "flex",
+              fontWeight: "bold",
+              fontSize: "15px",
+              marginLeft: "5px",
+            }}
+          >
+            <div style={{}}>I accept</div>
+            <div style={{ marginLeft: "5px", color: "#ff5000" }}>
+              {" "}
+              Terms and Conditions
+            </div>
+          </div>
         </div>
+        <button className="submitButton" type="submit">
+          Book Service
+        </button>
       </form>
-      <div id="packages">
-        <h1>Service Packages</h1>
-        <div>
-          <div>
-            <h1>STANDARD SERVICE</h1>
+      {/*------------------ form End -----------------*/}
+
+      <div className="packages">
+        <p style={{ color: "#ff5000", fontSize: "25px", textAlign: "left" }}>
+          Service Packages
+        </p>
+        <div className="packagesBlock">
+          <div
+            style={{
+              width: "18%",
+              textAlign: "center",
+              alignItem: "center",
+              paddingTop: "30px",
+              paddingLeft: "10px",
+              paddingRight: "10px",
+              backgroundColor: "#ff5000",
+              color: "white",
+            }}
+          >
+            <h1>STANDARD</h1>
+            <h1>SERVICE</h1>
             <p>Gearless Bikes</p>
           </div>
-          <div>
-            <h3>Standard Service For Gearless Bikes ₹1099/-</h3>
-            <ul>
-              <li>Hubs Checkup</li>
-              <li>Alignment of Headset</li>
-              <li>Bottom Bracket Checkup</li>
-              <li>Check and adjust brakes</li>
-              <li>Check and Lube Chain</li>
-              <li>Hubs Checkup</li>
-              <li>Check and Lube Cables</li>
-              <li>Lubrication of Drivetrain</li>
-              <li>Wipe clean the bicycle</li>
-              <li>Check tire's & inflate to correct pressure</li>
-              <li>Checking and Tightening all screws and bolts</li>
-              <li>Test Ride by Service Engineer</li>
-            </ul>
+          <div
+            style={{
+              width: "82%",
+              display: "flex",
+              backgroundColor: "whitesmoke",
+            }}
+          >
+            <div
+              style={{
+                width: "20%",
+                paddingTop: "50px",
+                textAlign: "center",
+              }}
+            >
+              <h3>Standard Service For Gearless Bikes ₹1099/-</h3>
+            </div>
+            <div
+              style={{
+                width: "80%",
+                display: "flex",
+                textAlign: "left",
+                padding: "0px",
+              }}
+            >
+              <ul>
+                <li>Hubs Checkup</li>
+                <li>Alignment of Headset</li>
+                <li>Bottom Bracket Checkup</li>
+                <li>Check and adjust brakes</li>
+                <li>Check and Lube Chain</li>
+              </ul>
+              <ul>
+                <li>Hubs Checkup</li>
+                <li>Check and Lube Cables</li>
+                <li>Lubrication of Drivetrain</li>
+                <li>Wipe clean the bicycle</li>
+                <li>Check tire's & inflate to correct pressure</li>
+                <li>Checking and Tightening all screws and bolts</li>
+                <li>Test Ride by Service Engineer</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div>
-          <div>
-            <h1>PREMIUM SERVICE</h1>
+
+        <div className="packagesBlock">
+          <div
+            style={{
+              width: "18%",
+              textAlign: "center",
+              alignItem: "center",
+              paddingTop: "25px",
+              paddingBottom: "25px",
+              paddingLeft: "10px",
+              paddingRight: "10px",
+              backgroundColor: "#ff5000",
+              color: "white",
+              position: "relatives",
+            }}
+          >
+            <h1>PREMIUM</h1>
+            <h1>SERVICE</h1>
             <p>Gearless Bikes</p>
           </div>
-          <div>
-            <h3>Premium Service For Gearless Bikes ₹1299/-</h3>
-            <ul>
-              <li>Hubs Checkup</li>
-              <li>Alignment of Headset</li>
-              <li>Bottom Bracket Checkup</li>
-              <li>Check and adjust brakes</li>
-              <li>Check and Lube Chain</li>
-              <li>Hubs Checkup</li>
-              <li>Check and Lube Cables</li>
-              <li>Fixing Puncture</li>
-              <li>Lubrication of Drivetrain</li>
-              <li>Wipe clean the bicycle</li>
-              <li>Wheel Truing ( Not wheel bend )</li>
-              <li>Check tire's & inflate to correct pressure</li>
-              <li>Dismantle of Hubs, Center Bracket and Headset</li>
-              <li>Test Ride by Service Engineer</li>
-            </ul>
+          <div
+            style={{
+              width: "82%",
+              display: "flex",
+              backgroundColor: "whitesmoke",
+            }}
+          >
+            <div
+              style={{
+                width: "20%",
+                paddingTop: "25px",
+                paddingBottom: "25px",
+                textAlign: "center",
+              }}
+            >
+              <h3>Premium Service For Gearless Bikes ₹1299/-</h3>
+            </div>
+            <div
+              style={{
+                width: "80%",
+                display: "flex",
+                textAlign: "left",
+                padding: "0px",
+                marginLeft: "0px",
+              }}
+            >
+              <ul>
+                <li>Hubs Checkup</li>
+                <li>Alignment of Headset</li>
+                <li>Bottom Bracket Checkup</li>
+                <li>Check and adjust brakes</li>
+                <li>Check and Lube Chain</li>
+                <li>Hubs Checkup</li>
+                <li>Check and Lube Cables</li>
+              </ul>
+              <ul>
+                <li>Fixing Puncture</li>
+                <li>Lubrication of Drivetrain</li>
+                <li>Wipe clean the bicycle</li>
+                <li>Wheel Truing ( Not wheel bend )</li>
+                <li>Check tire's & inflate to correct pressure</li>
+                <li>Dismantle of Hubs, Center Bracket and Headset</li>
+                <li>Test Ride by Service Engineer</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div>
-          <div>
-            <h1>STANDARD SERVICE</h1>
+
+        <div className="packagesBlock">
+          <div
+            style={{
+              width: "18%",
+              textAlign: "center",
+              alignItem: "center",
+              paddingTop: "25px",
+              paddingBottom: "25px",
+              paddingLeft: "10px",
+              paddingRight: "10px",
+              backgroundColor: "#ff5000",
+              color: "white",
+              position: "relatives",
+            }}
+          >
+            <h1>STANDARD</h1>
+            <h1>SERVICE</h1>
             <p>Geared Bikes.</p>
           </div>
-          <div>
-            <h3>Standard Service For Geared Bikes ₹1299/-</h3>
-            <ul>
-              <li>Hubs Checkup</li>
-              <li>Alignment of Headset</li>
-              <li>Bottom Bracket Checkup</li>
-              <li>Check and adjust brakes</li>
-              <li>Check and Lube Chain</li>
-              <li>Hubs Checkup</li>
-              <li>Check and Lube Cables</li>
-              <li>Fixing Puncture</li>
-              <li>Lubrication of Drivetrain</li>
-              <li>Wipe clean the bicycle</li>
-              <li>Wheel Truing ( Not wheel bend )</li>
-              <li>Check tire's & inflate to correct pressure</li>
-              <li>Checking and Tightening all screws and bolts</li>
-              <li>Test Ride by Service Engineer</li>
-            </ul>
+          <div
+            style={{
+              width: "82%",
+              display: "flex",
+              backgroundColor: "whitesmoke",
+            }}
+          >
+            <div
+              style={{
+                width: "20%",
+                paddingTop: "25px",
+                paddingBottom: "25px",
+                textAlign: "center",
+              }}
+            >
+              <h3>Standard Service For Geared Bikes ₹1299/-</h3>
+            </div>
+            <div
+              style={{
+                width: "80%",
+                display: "flex",
+                textAlign: "left",
+                padding: "0px",
+                marginLeft: "0px",
+              }}
+            >
+              <ul>
+                <li>Hubs Checkup</li>
+                <li>Alignment of Headset</li>
+                <li>Bottom Bracket Checkup</li>
+                <li>Check and adjust brakes</li>
+                <li>Check and Lube Chain</li>
+                <li>Hubs Checkup</li>
+              </ul>
+              <ul>
+                <li>Check and Lube Cables</li>
+                <li>Fixing Puncture</li>
+                <li>Lubrication of Drivetrain</li>
+                <li>Wipe clean the bicycle</li>
+                <li>Wheel Truing ( Not wheel bend )</li>
+                <li>Check tire's & inflate to correct pressure</li>
+                <li>Checking and Tightening all screws and bolts</li>
+                <li>Test Ride by Service Engineer</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div>
-          <div>
-            <h1>PREMIUM SERVICE</h1>
+
+        <div className="packagesBlock">
+          <div
+            style={{
+              width: "18%",
+              textAlign: "center",
+              alignItem: "center",
+              paddingTop: "25px",
+              paddingBottom: "25px",
+              paddingLeft: "10px",
+              paddingRight: "10px",
+              backgroundColor: "#ff5000",
+              color: "white",
+              position: "relatives",
+            }}
+          >
+            <h1>PREMIUM</h1>
+            <h1>SERVICE</h1>
             <p>Geared Bikes.</p>
           </div>
-          <div>
-            <h3>Premium Service For Geared Bikes ₹1499/-</h3>
-            <ul>
-              <li>Gear Tune up</li>
-              <li>Hubs Checkup</li>
-              <li>Alignment of Headset</li>
-              <li>Bottom Bracket Checkup</li>
-              <li>Check and adjust brakes</li>
-              <li>Check and Lube Chain</li>
-              <li>Hubs Checkup</li>
-              <li>Check and Lube Cables</li>
-              <li>Fixing Puncture</li>
-              <li>Lubrication of Drivetrain</li>
-              <li>Wipe clean the bicycle</li>
-              <li>Wheel Truing ( Not wheel bend )</li>
-              <li>Check tire's & inflate to correct pressure</li>
-              <li>Dismantle of Hubs, Center Bracket and Headset</li>
-              <li>Checking and Tightening all screws and bolts</li>
-              <li>Test Ride by Service Engineer</li>
-            </ul>
+          <div
+            style={{
+              width: "82%",
+              display: "flex",
+              backgroundColor: "whitesmoke",
+            }}
+          >
+            <div
+              style={{
+                width: "20%",
+                paddingTop: "25px",
+                paddingBottom: "25px",
+                textAlign: "center",
+              }}
+            >
+              <h3>Premium Service For Geared Bikes ₹1499/-</h3>
+            </div>
+            <div
+              style={{
+                width: "80%",
+                display: "flex",
+                textAlign: "left",
+                padding: "0px",
+                marginLeft: "0px",
+              }}
+            >
+              <ul>
+                <li>Gear Tune up</li>
+                <li>Hubs Checkup</li>
+                <li>Alignment of Headset</li>
+                <li>Bottom Bracket Checkup</li>
+                <li>Check and adjust brakes</li>
+                <li>Check and Lube Chain</li>
+                <li>Hubs Checkup</li>
+                <li>Check and Lube Cables</li>
+              </ul>
+              <ul>
+                <li>Fixing Puncture</li>
+                <li>Lubrication of Drivetrain</li>
+                <li>Wipe clean the bicycle</li>
+                <li>Wheel Truing ( Not wheel bend )</li>
+                <li>Check tire's & inflate to correct pressure</li>
+                <li>Dismantle of Hubs, Center Bracket and Headset</li>
+                <li>Checking and Tightening all screws and bolts</li>
+                <li>Test Ride by Service Engineer</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div>
-          <div>
+
+        <div className="packagesBlock">
+          <div
+            style={{
+              width: "18%",
+              textAlign: "center",
+              alignItem: "center",
+              paddingTop: "25px",
+              paddingBottom: "25px",
+              paddingLeft: "10px",
+              paddingRight: "10px",
+              backgroundColor: "black",
+              color: "white",
+              position: "relatives",
+            }}
+          >
             <h1>ADDITIONAL</h1>
           </div>
-          <div>
+          <div
+            style={{
+              width: "80%",
+              display: "flex",
+              textAlign: "left",
+              padding: "0px",
+              marginLeft: "0px",
+              backgroundColor: "whitesmoke",
+            }}
+          >
             <ul>
               <li>Puncture: ₹49/-</li>
               <li>Wheel truing: ₹149/-</li>
@@ -640,6 +560,81 @@ export const HomeServiceForm = () => {
             </ul>
           </div>
         </div>
+      </div>
+      <div>
+        <ul>
+          <li>
+            Finishline products are used and recommended for Firefox Bike
+            Service
+          </li>
+          <li>
+            In case of puncture, we recommend the user to get the tube replaced
+            instead of getting the puncture repaired.
+          </li>
+          <li>
+            Labour charges apply on selected part replacement (Bottom Bracket,
+            Derailleurs, Hangers, Fork, Headset etc.).
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p style={{ color: "#ff5000", fontSize: "25px", textAlign: "left" }}>
+          TERMS AND CONDITIONS
+        </p>
+        <ol>
+          <li style={{ fontWeight: "bolder" }}>
+            Free service is not available at Home.
+          </li>
+          <li style={{ fontWeight: "bolder" }}>
+            Due to lockdown and curfews in certain areas, the bookings slots may
+            be rescheduled.
+          </li>
+          <li>
+            Service can be cancelled with full refund atleast 24 hours before
+            the service start time. Within 24 hours of the service time no
+            refund will be processed.
+          </li>
+
+          <li>
+            Service can be rescheduled 24 hours before the service starting
+            time. Rescheduling within 24 hours can be done paying 200 INR
+            additionally.
+          </li>
+
+          <li>
+            Services can only be rescheduled once. If the service is not availed
+            the second time, it will automatically be cancelled without refund.
+          </li>
+          <li>
+            Once the service is booked, you do not have to pay any amount to the
+            Firefox Technician.
+          </li>
+          <li>
+            In case of service upgrade or parts replacement, the technician will
+            send and invoice and payment link to you.
+          </li>
+          <li>
+            Please read the package details carefully before choosing a service
+            package.
+          </li>
+          <li>Service is non transferrable.</li>
+          <li>Replacement of bike part(s) will be additionally charged.</li>
+          <li>
+            Home service can be booked for anyday apart from Monday and public
+            holidays.
+          </li>
+          <li>Home Service is only applicable on Firefox Bikes.</li>
+          <li>Service address cannot be changed once it is booked.</li>
+          <li>
+            Service time is based on the Package you choose, however, most
+            services will take approximately 45-120 minutes.
+          </li>
+          <li>
+            For servicing your bike we would need space like car park, balcony
+            or lobby. We request the customers to provide a space without pets
+            and kids intervention to avoid accidents.
+          </li>
+        </ol>
       </div>
     </div>
   );

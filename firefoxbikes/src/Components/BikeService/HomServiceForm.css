@@ -1,6 +1,37 @@
 .homeServiceForm{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap: 10px;
-    /* background-color: black; */
+    grid-gap: 25px;
+    margin-bottom: 25px;
+}
+.stationServiceForm{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 25px;
+    margin-bottom: 25px;
+}
+.inputDetail{
+    height: 35px;
+    border: black 1px solid;
+    padding: 5px 10px;
+}
+.submitButton{
+    background-color: #ff5000;
+    border: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+.packages{
+    width: 100%;
+    margin-bottom: 50px;
+}
+.packagesBlock{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
 }
