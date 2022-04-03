@@ -1,7 +1,13 @@
-import Axios from "axios";
+import axios from "axios";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-const CardPayment = () => {
+export const CardPayment = () => {
+  // const [isToggled, setIsToggled] = useState(false);
+
+  
+
+
   const url = "http://localhost:8080/cardpayment";
   const [data, setData] = useState({
     cardNum: "",
@@ -10,6 +16,8 @@ const CardPayment = () => {
     nameOnCard: "",
     tnc: "",
   });
+
+  const cart_total = JSON.parse(localStorage.getItem("cart_total"));
 
   const handleInduptChange = (e) => {
     const newData = { ...data };
@@ -20,15 +28,19 @@ const CardPayment = () => {
 
   const submit = (e) => {
     e.preventDefault();
-    Axios.post(url, {
-      cardNum: data.cardNum,
-      expiryDate: data.expiryDate,
-      enterCvv: data.enterCvv,
-      nameOnCard: parseInt(data.nameOnCard),
-      tnc: data.tnc,
-    }).then((res) => {
-      console.log(res.data);
-    });
+    axios
+      .post(url, {
+        cardNum: data.cardNum,
+        expiryDate: data.expiryDate,
+        enterCvv: data.enterCvv,
+        nameOnCard: parseInt(data.nameOnCard),
+        tnc: data.tnc,
+      })
+      .then((res) => {
+        alert("payment successfuly done");
+
+        console.log(res.data);
+      });
   };
 
   return (
@@ -42,6 +54,9 @@ const CardPayment = () => {
         borderRadius: "15px",
       }}
     >
+      {/* <div>
+      {isToggled ? <OrderPlaced />:""}
+    </div> */}
       <div
         style={{
           width: "40%",
@@ -76,7 +91,7 @@ const CardPayment = () => {
         </div>
         <div>
           <p style={{ fontSize: "30px", fontWeight: "500" }}>Enter new card</p>
-          <p style={{ fontWeight: "500" }}>Total Payable Amount₹22640</p>
+          <p style={{ fontWeight: "500" }}>Total Payable Amount₹{cart_total}</p>
           <p style={{ fontWeight: "0" }}>Transaction Id: 100110125</p>
         </div>
       </div>
@@ -129,7 +144,10 @@ const CardPayment = () => {
               id="cardNum"
               value={data.cardNum}
               placeholder="Enter Card Number"
-              type="number"
+              type="text"
+              minLength="16"
+              maxLength="16"
+              required
             />
             <div style={{ display: "flex", gap: "10px" }}>
               <div>
@@ -144,7 +162,10 @@ const CardPayment = () => {
                   id="expiryDate"
                   value={data.expiryDate}
                   placeholder="MM/YY"
-                  type="number"
+                  type="text"
+                  minLength="4"
+                  maxLength="4"
+                  required
                 />
               </div>
               <div>
@@ -159,7 +180,10 @@ const CardPayment = () => {
                   id="enterCvv"
                   value={data.enterCvv}
                   placeholder="Enter CVV"
-                  type="number"
+                  type="text"
+                  minLength="3"
+                  maxLength="3"
+                  required
                 />
               </div>
             </div>
@@ -177,6 +201,7 @@ const CardPayment = () => {
               value={data.nameOnCard}
               placeholder="Name as on card"
               type="text"
+              required
             />
             <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
               <input
@@ -194,26 +219,29 @@ const CardPayment = () => {
                 Save this option securely for faster payment
               </p>
             </div>
-            <button
-              style={{
-                marginBottom: "25px",
-                border: "none",
-                color: "Window",
-                backgroundColor: "#59b4ff",
-                width: "100%",
-                height: "35px",
-                borderRadius: "5px",
-                cursor: "pointer",
-              }}
-              type="submit"
-            >
-              PROCEED
-            </button>
+            <Link to={"/orderdone"}>
+              <button
+                // onClick={() => {
+                //   setIsToggled(!isToggled);
+                // }}
+                style={{
+                  marginBottom: "25px",
+                  border: "none",
+                  color: "Window",
+                  backgroundColor: "#59b4ff",
+                  width: "100%",
+                  height: "35px",
+                  borderRadius: "5px",
+                  cursor: "pointer",
+                }}
+                type="submit"
+              >
+                PROCEED
+              </button>
+            </Link>
           </form>
         </div>
       </div>
     </div>
   );
 };
-
-export default CardPayment;

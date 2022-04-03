@@ -6,6 +6,7 @@ import { ProductInfo } from "./ProductInfo";
 export const Cart = () => {
   const [cart_total, setCart_total] = useState(0)
   const totalPrice=(total)=>{
+    localStorage.setItem("cart_total", JSON.stringify(total))
     setCart_total(total)
     // console.log("total in cart", total)
   }
