@@ -16,7 +16,6 @@ export const DeliverServices = () => {
   console.log("pinData: ", pinData);
   return (
     <>
-      <h5>{pinData.State}</h5>
       <div className="delivery" style={{ margin: "5%", marginLeft: "10%" }}>
         <div style={{ fontSize: "30px", marginLeft: "20px" }}>DELIVERY &</div>
         <div
@@ -78,7 +77,11 @@ export const DeliverServices = () => {
               Free Home Delivery
             </div>
 
-            <div className="pincodeData">{/* <p>{pinData.State}</p> */}</div>
+            <div className="pincodeData">
+              <h5 style={{color: "tomato"}} >
+                {pinData.Name}, {pinData.Block}, {pinData.District}, {pinData.State}
+              </h5>
+            </div>
 
             <div>The product will be delivered within 10-12 days</div>
           </div>
