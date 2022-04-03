@@ -20,16 +20,20 @@ export const DeliverServices = () => {
           }}
         >
           <div style={{ margin: "20px", padding: "5px" }}>
-            <input
-              type="number"
-              placeholder="Enter Pincode"
-              style={{
-                padding: "7px 30px",
-                borderRadius: "5px",
-                border: "1px solid grey",
-                textAlign: 'left'
-              }}
-            />
+            
+            <div style={{width:'250px', borderRadius: "5px", display: 'flex',
+                  border: "1px solid grey", height: "30px", padding: "5px",}} >
+              <input
+                type="number"
+                placeholder="Enter Pincode"
+                style={{
+                  border:'none',
+                  textAlign: 'left',
+                  backgroundColor: 'transparent',
+                }}
+              / >
+              <button style={{border:'none', cursor:'pointer', backgroundColor: 'transparent', color:'tomato'}} >Check</button>
+            </div>
             <div
               style={{
                 fontWeight: "bold",
