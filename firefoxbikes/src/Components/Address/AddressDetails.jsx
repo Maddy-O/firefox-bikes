@@ -22,22 +22,28 @@ export const Address = () => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
   };
-  const onSubmit = (e) => {
-    e.preventDefault();
-    alert("Address Added Successfully!");
+  // const onSubmit = (e) => {
+  //   e.preventDefault();
+  //   alert("Address Added Successfully!");
+  // };
+  
+  const [create, setCreate] = useState([]);
+  useEffect(() => {
+    showData()
+  }, []);
+  console.log("create change", create)
+  const showData = () => {
+    axios.get("http://localhost:8080/users").then(({data}) => {
+      setCreate(data);
+      console.log("showData Execute")
+    });
   };
 
   const submit = () => {
-    console.log(formData);
-    axios.post("http://localhost:8080/users", formData).then(() => {});
-  };
-
-  const [create, setCreate] = useState([]);
-  useEffect(() => showData(), []);
-
-  const showData = () => {
-    axios.get("http://localhost:8080/users").then((res) => {
-      setCreate(res.data);
+    // console.log(formData);
+    axios.post("http://localhost:8080/users", formData).then(() => {
+      // alert("Address Added Successfully!");
+      showData();
     });
   };
 
@@ -70,14 +76,13 @@ export const Address = () => {
             marginLeft: "3.5%",
             padding: "10px",
             width: "680px",
-            border: "1px solid tomato",
-            borderRadius: "6px",
+            // borderTop: "1px solid #333333",
           }}
         >
           <div style={{ fontSize: "22px", fontWeight: "bold" }}>ADD</div>
           <div style={{ fontSize: "22px", marginTop: "0px" }}>NEW ADDRESS</div>
 
-          <form onSubmit={onSubmit} style={{ height: "400px" }}>
+          <form  style={{ height: "400px" }}>
             <h3>Personal Details</h3>
             <div style={{ display: "flex", gap: "25px", height: "35px" }}>
               <p>First Name : </p>
