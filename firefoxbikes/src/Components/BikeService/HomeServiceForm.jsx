@@ -258,7 +258,7 @@ export const HomeServiceForm = () => {
       </form>
       {/*------------------ form End -----------------*/}
 
-      <div className="packages">
+      <div className="packages" id="packages">
         <p style={{ color: "#ff5000", fontSize: "25px", textAlign: "left" }}>
           Service Packages
         </p>
