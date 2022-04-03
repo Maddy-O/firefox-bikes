@@ -1,13 +1,14 @@
 # Firefoxbikes-clone-project
 
-It is a team project to clone Firefocbikes.com having both FrontEnd and BackEnd functionality. Firefocbikes.com is a leading online Bike Platform.
+The project is basically a clone of the FireFoxBikes website.
+Firefox Bikes, India's leading bicycle brand, offers an exclusive & expansive range of premium bikes.
 
 ![image](https://miro.medium.com/max/1400/1*CcP-8v7snAWZztRrfqWugA.png)
 
 ##TEAMWORK
 ![image](https://miro.medium.com/max/1362/1*rMTIKwr0a2sYS6Cpw7QW7w.png)
 
-Welcome to our Project Work. We are a team of 4 members, Rana Sarkar, Madan Mohan, Ambika Kumari, and Amaresh Barik. Our task is to clone an online bike platform called Firefoxbikes.com. Coordination and Active Participation is our motto.
+Welcome to our Project. We are a team of 4 members, Rana Sarkar, Madan Mohan, Ambika Kumari, and Amaresh Barik. Our task is to clone an online bike platform called Firefoxbikes.com. Coordination and Active Participation is our motto.
 As a team, we divide our work with a complete consensus, we meet regularly to discuss how to build it, what tech stacks we are going to use, our daily progress, and our difficulties. we are feeling happy that we complete the project successfully.
 
 ##TECK STACKS
