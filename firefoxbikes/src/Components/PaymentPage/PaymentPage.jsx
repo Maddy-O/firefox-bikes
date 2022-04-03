@@ -4,49 +4,126 @@ import UpiPayment from "./UpiPayment";
 
 const PaymentPage = () => {
   return (
-    <div>
-      <div>
-        <div>
-          <div>Back</div>
-          <div>FireFoxbikes</div>
+    <div
+      style={{
+        display: "flex",
+        width: "60%",
+        marginTop: "50px",
+        margin: "auto",
+        boxShadow: "5px 5px 15px gray",
+        borderRadius: "15px",
+      }}
+    >
+      <div
+        style={{
+          width: "40%",
+          padding: "10px",
+          boxShadow: "5px 5px 5px gray",
+          borderRadius: "15px",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            padding: "2px",
+            boxShadow: "0px 2px 0px whitesmoke",
+          }}
+        >
+          <div
+            style={{
+              margin: "2px",
+              width: "50%",
+            }}
+          >
+            Back
+          </div>
+          <div
+            style={{
+              width: "50%",
+              textAlign: "right",
+            }}
+          >
+            FireFoxbikes
+          </div>
         </div>
         <div>
-          <h1>Enter Google Pay UPI ID</h1>
-          <h4>Total Payable Amount₹22640</h4>
-          <p>Transaction Id: 100110125</p>
+          <p style={{ fontSize: "30px", fontWeight: "500" }}>
+            Choose a payment option
+          </p>
+          <p style={{ fontWeight: "500" }}>Total Payable Amount₹22640</p>
+          <p style={{ fontWeight: "0" }}>Transaction Id: 100110125</p>
         </div>
       </div>
-      <div>
-        <div style={{ display: "flex" }}>
-          <div>UPI OPTIONS</div>
-          <select id="language">
-            <option value="English">English</option>
-            <option value="Hindi">Hindi</option>
-          </select>
+      <div
+        style={{
+          width: "60%",
+          padding: "10px",
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            padding: "2px",
+            boxShadow: "0px 2px 0px whitesmoke",
+          }}
+        >
+          <div
+            style={{
+              width: "50%",
+              margin: "2px",
+            }}
+          >
+            PAYMENT OPTIONS
+          </div>
+          <div
+            style={{
+              width: "50%",
+              textAlign: "right",
+            }}
+          >
+            <select id="language">
+              <option value="English">English</option>
+              <option value="Hindi">Hindi</option>
+            </select>
+          </div>
         </div>
-        <div>
+        <div style={{ width: "75%", margin: "auto", padding: "15px" }}>
           <div>
-            <a href="CardPayment">
-              <h3>Cards (Credit/Debit)</h3>
-              <p>Visa, Mastercard, Diners Club, Rupay, Amex</p>
+            <a style={{ textDecoration: "none" }} href="CardPayment">
+              <h3 style={{ color: "black", marginBottom: "5px" }}>
+                Cards (Credit/Debit)
+              </h3>
+              <p style={{ color: "gray", marginTop: "5px" }}>
+                Visa, Mastercard, Diners Club, Rupay, Amex
+              </p>
             </a>
           </div>
-          <div>
-            <h3>EMI</h3>
-            <p>Credit Card, Debit Card</p>
+          <hr style={{ border: "1px solid whitesmoke" }} />
+          <div style={{ cursor: "pointer" }}>
+            <h3 style={{ color: "black", marginBottom: "5px" }}>EMI</h3>
+            <p style={{ color: "gray", marginTop: "5px" }}>
+              Credit Card, Debit Card
+            </p>
           </div>
-          <div>
-            <h3>Wallet</h3>
-            <p>Amazon Pay, Paytm, PhonePe & more</p>
+          <hr style={{ border: "1px solid whitesmoke" }} />
+          <div style={{ cursor: "pointer" }}>
+            <h3 style={{ color: "black", marginBottom: "5px" }}>Wallet</h3>
+            <p style={{ color: "gray", marginTop: "5px" }}>
+              Amazon Pay, Paytm, PhonePe & more
+            </p>
           </div>
-          <div>
-            <h3>Net Banking</h3>
-            <p>All India Banks</p>
+          <hr style={{ border: "1px solid whitesmoke" }} />
+          <div style={{ cursor: "pointer" }}>
+            <h3 style={{ color: "black", marginBottom: "5px" }}>Net Banking</h3>
+            <p style={{ color: "gray", marginTop: "5px" }}>All India Banks</p>
           </div>
+          <hr style={{ border: "1px solid whitesmoke" }} />
           <div>
-            <a href="UpiPayment">
-              <h3>UPI</h3>
-              <p>Gpay, PhonePe, BHIM, Paytm</p>
+            <a style={{ textDecoration: "none" }} href="UpiPayment">
+              <h3 style={{ color: "black", marginBottom: "5px" }}>UPI</h3>
+              <p style={{ color: "gray", marginTop: "5px" }}>
+                Gpay, PhonePe, BHIM, Paytm
+              </p>
             </a>
           </div>
         </div>
