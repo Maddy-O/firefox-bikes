@@ -2,11 +2,8 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-export const CardPayment = () => {
+const CardPayment = () => {
   // const [isToggled, setIsToggled] = useState(false);
-
-  
-
 
   const url = "http://localhost:8080/cardpayment";
   const [data, setData] = useState({
@@ -245,3 +242,5 @@ export const CardPayment = () => {
     </div>
   );
 };
+
+export default CardPayment;
